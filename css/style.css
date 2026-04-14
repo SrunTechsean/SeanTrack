@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-rows: 8rem 1fr;
+    grid-template-rows: 6rem 1fr;
     height: 100vh;
 }
 
@@ -47,5 +47,43 @@
 }
 
 .main {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "progress macros"
+        "add add"
+        "log log";
+    grid-template-rows: 8rem 2fr 1fr 30rem;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem;
+    padding: 0 10rem;
     background-color: var(--background-grey);
+}
+
+.main__header {
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.main__progess {
+    grid-area: progress;
+    background-color: var(--background-white);
+}
+
+.main__macros {
+    grid-area: macros;
+    background-color: var(--background-white);
+}
+
+.main__add {
+    grid-area: add;
+    background-color: var(--background-white);
+}
+
+.main__log {
+    grid-area: log;
+    background-color: var(--background-white);
 }
