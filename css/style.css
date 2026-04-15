@@ -242,9 +242,11 @@
 }
 
 .quick-add__body {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: clamp(1rem, 5%, 10rem);
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .meal-btn {
@@ -255,7 +257,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 14.5rem;
+    min-width: clamp(8rem, 20%, 14.5rem);
     aspect-ratio: 2 / 1;
     background-color: var(--_btn-color);
     border: none;
