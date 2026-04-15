@@ -140,14 +140,60 @@
                     <div class="card__header">
                         <h3 class="card__tittle">Macros</h3>
                     </div>
-                    <div class="card__progressBar">
-                        <div class="progressBar">
-                            <div class="progressBar__info">
-                                <p class="progressBar__label">Protein</p>
-                                <p class="progressBar__value">85g/150g</p>
-                            </div>
-                            <progress class="" max="100" value="56"></progress>
-                        </div>
+                    <div class="macros-card__body">
+                        <ul class="macros__list">
+                            <li class="macros__item">
+                                <div class="macros">
+                                    <header class="macros__header">
+                                        <p class="macros__name">Protein</p>
+                                        <p class="macros_value">
+                                            <span class="macros__current">85</span>
+                                            <span class="macros__divider">/</span>
+                                            <span class="macros__target">130g</span>
+                                        </p>
+                                    </header>
+                                    <progress
+                                        class="macros__bar macros__bar--protein"
+                                        max="100"
+                                        value="56"
+                                    ></progress>
+                                </div>
+                            </li>
+                            <li class="macros__item">
+                                <div class="macros">
+                                    <header class="macros__header">
+                                        <p class="macros__name">Carbs</p>
+                                        <p class="macros_value">
+                                            <span class="macros__current">85</span>
+                                            <span class="macros__divider">/</span>
+                                            <span class="macros__target">130g</span>
+                                        </p>
+                                    </header>
+                                    <progress
+                                        class="macros__bar macros__bar--carb"
+                                        max="100"
+                                        value="39"
+                                    ></progress>
+                                </div>
+                            </li>
+                            <li class="macros__item">
+                                <div class="macros">
+                                    <header class="macros__header">
+                                        <p class="macros__name">Fats</p>
+                                        <p class="macros_value">
+                                            <span class="macros__current">85</span>
+                                            <span class="macros__divider">/</span>
+                                            <span class="macros__target">130g</span>
+                                        </p>
+                                    </header>
+                                    <progress
+                                        class="macros__bar macros__bar--fat"
+                                        max="100"
+                                        value="70"
+                                    ></progress>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </section>
                 <section class="card main__add"></section>
