@@ -269,6 +269,30 @@
     --btn-shadow: 0 0 3px var(--primary-dark);
 }
 
+.meal-btn--lunch {
+    --btn-color: color-mix(in srgb, var(--orange), white 80%);
+    --icon-color: var(--orange);
+    --btn-shadow: 0 0 3px var(--orange);
+}
+
+.meal-btn--dinner {
+    --btn-color: var(--primary-light);
+    --icon-color: var(--primary-dark);
+    --btn-shadow: 0 0 3px var(--primary-dark);
+}
+
+.meal-btn--breakfast {
+    --btn-color: var(--primary-light);
+    --icon-color: var(--primary-dark);
+    --btn-shadow: 0 0 3px var(--primary-dark);
+}
+
+.meal-btn--breakfast {
+    --btn-color: var(--primary-light);
+    --icon-color: var(--primary-dark);
+    --btn-shadow: 0 0 3px var(--primary-dark);
+}
+
 .main__log {
     grid-area: log;
     background-color: var(--background-white);
