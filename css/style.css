@@ -11,7 +11,7 @@
     justify-content: space-between;
     padding: 0 5rem;
     background-color: var(--background-white);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+    box-shadow: var(--shadow);
 }
 
 .header__logo {
@@ -60,12 +60,120 @@
     background-color: var(--background-grey);
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--background-white);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__badge {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    border-radius: var(--radius-md);
+}
+
+.card__content {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+.card__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+[role="progressWheel"] {
+    --size: 20rem;
+    --bar-width: 5rem;
+    position: relative;
+
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    aspect-ratio: 1;
+    background: conic-gradient(var(--primary) var(--cal-progress, 0), var(--primary-light) 0%);
+    border-radius: 50%;
+}
+
+[role="progressWheel"]::after {
+    display: grid;
+    place-items: center;
+    width: calc(100% - var(--bar-width));
+    aspect-ratio: 1;
+    text-align: center;
+    content: "";
+    background-color: var(--background-white);
+    border-radius: 50%;
+}
+
+/* [role="progressWheel"]::after::first-line { */
+/*     font-size: 3rem; */
+/*     font-weight: 700; */
+/*     color: var(--text-primary); */
+/* } */
+
+[role="progressWheel"] .progressWheel__value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    transform: translate(-50%, -70%);
+}
+
+[role="progressWheel"] .progressWheel__label {
+    position: absolute;
+    bottom: 35%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+[role="progressWheel"] .progressWheel__warning {
+    display: none;
+}
+
+.card__progress-wheel:not([role="progressWheel"]) {
+    display: grid;
+    place-items: center;
+    color: var(--red);
+}
+
+.card__cal-remainder {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
 .main__header {
     display: flex;
     flex-direction: column;
     grid-area: header;
     justify-content: center;
     padding-top: 1rem;
+}
+
+.main__greeting {
+    color: var(--text-primary);
+}
+
+.main__date {
+    color: var(--text-secondary);
 }
 
 .main__progess {
