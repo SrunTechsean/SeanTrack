@@ -335,3 +335,8 @@
 .trash__icon {
     --icon-color: var(--red);
 }
+
+.log__link h3 {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
