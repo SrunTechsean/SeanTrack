@@ -61,10 +61,9 @@
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-rows: 3.1rem 1fr;
+    padding: 1rem 2rem;
     background-color: var(--background-white);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow);
@@ -88,6 +87,7 @@
 .progress-card__body {
     display: flex;
     gap: 3rem;
+    align-items: center;
     justify-content: center;
 }
 .progress-card__stat {
@@ -126,7 +126,7 @@
     display: grid;
     place-items: center;
     width: var(--size);
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     background: conic-gradient(var(--primary) var(--cal-progress, 0), var(--primary-light) 0%);
     border-radius: 50%;
 }
@@ -182,9 +182,53 @@
     background-color: var(--background-white);
 }
 
-.progressBar__info {
+.macros__header {
     display: flex;
     justify-content: space-between;
+}
+
+.macros-card__body {
+    display: flex;
+    align-items: center;
+}
+
+.macros__list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.macros__bar::-webkit-progress-bar /* restyling progress for (Chrome, Safari, Edge) */,
+.macros__bar /* Restyling progress for firefox */ {
+    background-color: var(--background-grey);
+    border-radius: var(--radius-md);
+}
+
+/* Chrome, Safari, Edge value*/
+.macros__bar::-webkit-progress-value {
+    --_bar-color: var(--bar-color, var(--background-grey));
+    background-color: var(--bar-color);
+    border-radius: var(--radius-md);
+}
+
+/* Firefox value*/
+.macros__bar::-moz-progress-bar {
+    --_bar-color: var(--bar-color, var(--background-grey));
+    background-color: var(--bar-color);
+    border-radius: var(--radius-md);
+}
+
+.macros__bar--protein {
+    --bar-color: var(--accent);
+}
+
+.macros__bar--carb {
+    --bar-color: var(--blue);
+}
+
+.macros__bar--fat {
+    --bar-color: var(--orange);
 }
 
 .main__add {
