@@ -236,6 +236,20 @@
     background-color: var(--background-white);
 }
 
+.quick-add__body {
+    display: flex;
+    align-items: center;
+}
+
+.meal-btn {
+    display: grid;
+    place-items: center;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+}
+
 .main__log {
     grid-area: log;
     background-color: var(--background-white);
