@@ -276,21 +276,15 @@
 }
 
 .meal-btn--dinner {
-    --btn-color: var(--primary-light);
-    --icon-color: var(--primary-dark);
-    --btn-shadow: 0 0 3px var(--primary-dark);
+    --btn-color: color-mix(in srgb, var(--blue), white 80%);
+    --icon-color: var(--blue);
+    --btn-shadow: 0 0 3px var(--blue);
 }
 
-.meal-btn--breakfast {
-    --btn-color: var(--primary-light);
-    --icon-color: var(--primary-dark);
-    --btn-shadow: 0 0 3px var(--primary-dark);
-}
-
-.meal-btn--breakfast {
-    --btn-color: var(--primary-light);
-    --icon-color: var(--primary-dark);
-    --btn-shadow: 0 0 3px var(--primary-dark);
+.meal-btn--snack {
+    --btn-color: color-mix(in srgb, var(--red), white 80%);
+    --icon-color: var(--red);
+    --btn-shadow: 0 0 3px var(--red);
 }
 
 .main__log {
