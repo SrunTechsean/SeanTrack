@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 0 min(5rem, 5%);
     background-color: var(--background-white);
     box-shadow: var(--shadow);
 }
@@ -25,7 +25,7 @@
 
 .header__menu {
     display: flex;
-    gap: clamp(2rem, 6vw, 7rem);
+    gap: 6vw;
 }
 
 .header__link {
@@ -37,11 +37,12 @@
     height: 4rem;
     font-weight: 600;
     color: var(--text-primary);
-    border-radius: var(--radius);
+    border-radius: var(--radius-sm);
 }
 
 .header__link:active,
 .header__link:focus {
+    --icon-color: var(--primary-dark);
     color: var(--primary-dark);
     background-color: var(--primary-light);
 }
@@ -61,7 +62,7 @@
     grid-template-rows: 8rem 2fr 1fr 30rem;
     grid-template-columns: 1.5fr 1fr;
     gap: 1rem;
-    padding: 0 10rem;
+    padding: 0 min(8%, 10rem);
     background-color: var(--background-grey);
 }
 
