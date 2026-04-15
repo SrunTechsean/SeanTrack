@@ -1,7 +1,12 @@
-.container {
+.app {
     display: grid;
     grid-template-rows: 6rem 1fr;
     height: 100vh;
+}
+
+.icon {
+    --_icon-color: var(--icon-color, var(--text-primary));
+    color: var(--_icon-color);
 }
 
 .header {
