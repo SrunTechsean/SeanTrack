@@ -248,6 +248,8 @@
 }
 
 .meal-btn {
+    --_btn-color: var(--btn-color, var(--background-grey));
+    --_btn-shadow: var(--btn-shadow, var(--shadow));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,9 +257,16 @@
 
     width: 14.5rem;
     aspect-ratio: 2 / 1;
+    background-color: var(--_btn-color);
     border: none;
     border-radius: var(--radius-sm);
-    box-shadow: var(--shadow);
+    box-shadow: var(--_btn-shadow);
+}
+
+.meal-btn--breakfast {
+    --btn-color: var(--primary-light);
+    --icon-color: var(--primary-dark);
+    --btn-shadow: 0 0 3px var(--primary-dark);
 }
 
 .main__log {
