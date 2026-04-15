@@ -114,27 +114,42 @@
                     <h3 class="main__greeting">Good Morning, Techsean</h3>
                     <p class="main__date">Tuesday, April 14</p>
                 </section>
-                <section class="card main__progess">
+                <section class="card progress-card">
                     <div class="card__header">
                         <h3 class="card__tittle">Today's Progress</h3>
-                        <p class="card__badge">Goal: 3000 kcal</p>
+                        <p class="badge">Goal: 3000 kcal</p>
                     </div>
-                    <div class="card__content">
-                        <div class="progressWheel">
-                            <span class="progressWheel__warning">
+                    <div class="progress-card__body">
+                        <div class="progress-ring">
+                            <span class="progress-ring__warning">
                                 This should be a progress wheel showing your calorie
                                 progress!
                             </span>
-                            <p class="progressWheel__value"></p>
-                            <p class="progressWheel__label">consumed</p>
+                            <p class="progress-ring__value"></p>
+                            <p class="progress-ring__label">consumed</p>
                         </div>
-                        <div class="card__data">
-                            <p class="card__cal-remainder">640 kcal</p>
-                            <p class="card__text">Remaining</p>
+                        <div class="progress-card__stat">
+                            <div class="stat">
+                                <p class="stat__value">640 kcal</p>
+                                <p class="stat__label">Remaining</p>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="card main__macros"></section>
+                <section class="card macros-card">
+                    <div class="card__header">
+                        <h3 class="card__tittle">Macros</h3>
+                    </div>
+                    <div class="card__progressBar">
+                        <div class="progressBar">
+                            <div class="progressBar__info">
+                                <p class="progressBar__label">Protein</p>
+                                <p class="progressBar__value">85g/150g</p>
+                            </div>
+                            <progress class="" max="100" value="56"></progress>
+                        </div>
+                    </div>
+                </section>
                 <section class="card main__add"></section>
                 <section class="card main__log"></section>
             </main>

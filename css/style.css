@@ -75,7 +75,7 @@
     justify-content: space-between;
 }
 
-.card__badge {
+.badge {
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -85,15 +85,37 @@
     border-radius: var(--radius-md);
 }
 
-.card__content {
+.progress-card__body {
     display: flex;
     gap: 3rem;
     justify-content: center;
 }
-.card__data {
+.progress-card__stat {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.main__header {
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.main__greeting {
+    color: var(--text-primary);
+}
+
+.main__date {
+    color: var(--text-secondary);
+}
+
+/* Progress Section */
+.progress-card {
+    grid-area: progress;
+    background-color: var(--background-white);
 }
 
 [role="progressWheel"] {
@@ -120,13 +142,7 @@
     border-radius: 50%;
 }
 
-/* [role="progressWheel"]::after::first-line { */
-/*     font-size: 3rem; */
-/*     font-weight: 700; */
-/*     color: var(--text-primary); */
-/* } */
-
-[role="progressWheel"] .progressWheel__value {
+[role="progressWheel"] .progress-ring__value {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -136,7 +152,7 @@
     transform: translate(-50%, -70%);
 }
 
-[role="progressWheel"] .progressWheel__label {
+[role="progressWheel"] .progress-ring__label {
     position: absolute;
     bottom: 35%;
     font-size: 1.6rem;
@@ -144,46 +160,31 @@
     color: var(--text-secondary);
 }
 
-[role="progressWheel"] .progressWheel__warning {
+[role="progressWheel"] .progress-ring__warning {
     display: none;
 }
 
-.card__progress-wheel:not([role="progressWheel"]) {
+.progress-ring:not([role="progressWheel"]) {
     display: grid;
     place-items: center;
     color: var(--red);
 }
 
-.card__cal-remainder {
+.stat__value {
     font-size: 3rem;
     font-weight: 700;
     color: var(--primary);
 }
 
-.main__header {
-    display: flex;
-    flex-direction: column;
-    grid-area: header;
-    justify-content: center;
-    padding-top: 1rem;
-}
-
-.main__greeting {
-    color: var(--text-primary);
-}
-
-.main__date {
-    color: var(--text-secondary);
-}
-
-.main__progess {
-    grid-area: progress;
-    background-color: var(--background-white);
-}
-
-.main__macros {
+/* Macros Section */
+.macros-card {
     grid-area: macros;
     background-color: var(--background-white);
+}
+
+.progressBar__info {
+    display: flex;
+    justify-content: space-between;
 }
 
 .main__add {

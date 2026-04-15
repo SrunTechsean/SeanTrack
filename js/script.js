@@ -1,5 +1,5 @@
-const progressWheel = document.querySelector(".progressWheel");
-const progressWheelValue = document.querySelector(".progressWheel__value");
+const progressWheel = document.querySelector(".progress-ring");
+const progressWheelValue = document.querySelector(".progress-ring__value");
 
 function enableProgressWheel() {
     progressWheel.setAttribute("role", "progressWheel");
