@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: 6rem 1fr;
     height: 100vh;
+    overflow: hidden;
 }
 
 .icon {
@@ -59,9 +60,10 @@
         "progress macros"
         "add add"
         "log log";
-    grid-template-rows: 8rem 2fr 1fr 30rem;
+    grid-template-rows: auto minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
     grid-template-columns: 1.5fr 1fr;
     gap: 1rem;
+    height: 100%;
     padding: 0 min(8%, 10rem);
     background-color: var(--background-grey);
 }
@@ -290,7 +292,24 @@
     --btn-shadow: 0 0 3px var(--red);
 }
 
-.main__log {
+.log {
     grid-area: log;
-    background-color: var(--background-white);
+}
+
+.log-card {
+    height: 100%;
+    overflow: scroll;
+}
+
+.log__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+.table {
+    height: 100%;
+}
+
+.trash__icon {
+    --icon-color: var(--red);
 }
