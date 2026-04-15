@@ -5,12 +5,16 @@
     --blue: #3c88fb;
     --orange: #f39e11;
     --red: #e64340;
+    --accent: #dd4582;
 
     --text-primary: #343b4b;
-    --text-secondary: #8b919b;
+    --text-secondary: #70757d;
 
     --background-grey: #efeff2;
     --background-white: #fff;
 
-    --radius: 8px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
 }
