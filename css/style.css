@@ -231,7 +231,7 @@
     --bar-color: var(--orange);
 }
 
-.main__add {
+.quick-add {
     grid-area: add;
     background-color: var(--background-white);
 }
