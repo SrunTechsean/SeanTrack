@@ -68,6 +68,24 @@
     background-color: var(--background-grey);
 }
 
+/* main header section */
+.main__header {
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.main__greeting {
+    color: var(--text-primary);
+}
+
+.main__date {
+    color: var(--text-secondary);
+}
+
+/* Card Design  */
 .card {
     display: grid;
     grid-template-rows: 3.1rem 1fr;
@@ -92,6 +110,12 @@
     border-radius: var(--radius-md);
 }
 
+/* Progress Section */
+.progress-card {
+    grid-area: progress;
+    background-color: var(--background-white);
+}
+
 .progress-card__body {
     display: flex;
     gap: 3rem;
@@ -102,28 +126,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.main__header {
-    display: flex;
-    flex-direction: column;
-    grid-area: header;
-    justify-content: center;
-    padding-top: 1rem;
-}
-
-.main__greeting {
-    color: var(--text-primary);
-}
-
-.main__date {
-    color: var(--text-secondary);
-}
-
-/* Progress Section */
-.progress-card {
-    grid-area: progress;
-    background-color: var(--background-white);
 }
 
 [role="progressWheel"] {
@@ -184,6 +186,10 @@
     color: var(--primary);
 }
 
+.stat__label {
+    color: var(--text-secondary);
+}
+
 /* Macros Section */
 .macros-card {
     grid-area: macros;
@@ -198,6 +204,7 @@
 .macros-card__body {
     display: flex;
     align-items: center;
+    color: var(--text-secondary);
 }
 
 .macros__list {
@@ -292,13 +299,14 @@
     --btn-shadow: 0 0 3px var(--red);
 }
 
+/* Log Section */
 .log {
     grid-area: log;
 }
 
 .log-card {
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .log__header {
@@ -306,8 +314,21 @@
     justify-content: space-between;
     padding-bottom: 1rem;
 }
-.table {
-    height: 100%;
+
+.meal__list {
+    display: grid;
+    grid-template-columns: auto 1fr repeat(3, auto);
+    gap: 3rem;
+    align-items: center;
+}
+
+.meal__title {
+    color: var(--text-secondary);
+}
+
+.line-break {
+    margin: 1rem 0;
+    color: var(--text-secondary);
 }
 
 .trash__icon {
