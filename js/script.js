@@ -80,7 +80,18 @@ function renderMeal() {
 
 renderMeal();
 
-function enableprogressWheel() {
+function renderProgressSection() {
+    const statValue = document.querySelector(".stat__value");
+    const statLabel = document.querySelector(".stat__label");
+    const remainingCal = state.goal - state.consumed;
+    if (remainingCal < 0) {
+        statValue.textContent = `${Math.abs(remainingCal)}`;
+        statValue.style.setProperty("color", "var(--red)");
+        statLabel.textContent = "OVER YOUR GOAL!";
+    } else {
+        statValue.textContent = `${remainingCal}`;
+    }
+
     progressWheel.setAttribute("role", "progressWheel");
     progressWheel.setAttribute("aria-valuenow", state.consumed);
     progressWheel.setAttribute("aria-live", "polite");
@@ -89,7 +100,7 @@ function enableprogressWheel() {
     root.style.setProperty("--cal-progress", `${percentageCalculator(state.goal, state.consumed)}%`);
 }
 
-enableprogressWheel();
+renderProgressSection();
 
 function percentageCalculator(total, amount) {
     return ((amount * 100) / total).toFixed(2);
