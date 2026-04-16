@@ -8,6 +8,11 @@ function saveEntries() {
     localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
 }
 
+function loadEntries() {
+    const storedEntries = localStorage.getItem("SeanTrack-entries");
+    state.entries = storedEntries ? JSON.parse(storedEntries) : [];
+}
+
 const entries = [
     {
         id: crypto.randomUUID(),
