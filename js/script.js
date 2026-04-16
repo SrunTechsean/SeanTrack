@@ -67,23 +67,27 @@ function renderMeal() {
         mealCal.classList.add("meal__macros");
         mealCal.textContent = `${entry.calories} kcal`;
 
-        const lineBreak = document.createElement("hr");
-        lineBreak.classList.add("line-break");
-
         mealItem.append(mealInfo, mealCal);
         mealInfo.append(mealType, mealName);
 
         // add that itme into the log
-        logs.append(mealItem, lineBreak);
+        logs.append(mealItem);
     });
 }
 
 renderMeal();
 
 function renderProgressSection() {
+    const badge = document.querySelector(".badge");
     const statValue = document.querySelector(".stat__value");
     const statLabel = document.querySelector(".stat__label");
+
     const remainingCal = state.goal - state.consumed;
+
+    // Render Calorie Goal Badge
+    badge.textContent = `Goal: ${state.goal} kcal`;
+
+    // Render the stats
     if (remainingCal < 0) {
         statValue.textContent = `${Math.abs(remainingCal)}`;
         statValue.style.setProperty("color", "var(--red)");
@@ -92,6 +96,7 @@ function renderProgressSection() {
         statValue.textContent = `${remainingCal}`;
     }
 
+    // Add attribute so the progressWheel renders
     progressWheel.setAttribute("role", "progressWheel");
     progressWheel.setAttribute("aria-valuenow", state.consumed);
     progressWheel.setAttribute("aria-live", "polite");
@@ -105,3 +110,5 @@ renderProgressSection();
 function percentageCalculator(total, amount) {
     return ((amount * 100) / total).toFixed(2);
 }
+
+// localStorage.removeItem("SeanTrack-entries");
