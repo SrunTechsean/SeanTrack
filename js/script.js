@@ -13,6 +13,10 @@ function loadEntries() {
     state.entries = storedEntries ? JSON.parse(storedEntries) : [];
 }
 
+function getConsumeCalories() {
+    return state.entries.reduce((total, entry) => total + entry.calories, 0);
+}
+
 const entries = [
     {
         id: crypto.randomUUID(),
