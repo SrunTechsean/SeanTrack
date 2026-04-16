@@ -82,11 +82,15 @@ renderMeal();
 
 function enableprogressWheel() {
     progressWheel.setAttribute("role", "progressWheel");
-    progressWheel.setAttribute("aria-valuenow", getConsumeCalories());
+    progressWheel.setAttribute("aria-valuenow", state.consumed);
     progressWheel.setAttribute("aria-live", "polite");
     progressWheelValue.textContent = progressWheel.ariaValueNow;
 
-    root.style.setProperty("--cal-progress", `${getConsumeCalories()}%`);
+    root.style.setProperty("--cal-progress", `${percentageCalculator(state.goal, state.consumed)}%`);
 }
 
 enableprogressWheel();
+
+function percentageCalculator(total, amount) {
+    return ((amount * 100) / total).toFixed(2);
+}
