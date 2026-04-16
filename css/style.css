@@ -10,6 +10,19 @@
     color: var(--_icon-color);
 }
 
+.icon--breakfast {
+    --icon-color: var(--primary-dark);
+}
+.icon--lunch {
+    --icon-color: var(--orange);
+}
+.icon--dinner {
+    --icon-color: var(--blue);
+}
+.icon--snack {
+    --icon-color: var(--red);
+}
+
 .header {
     z-index: 1;
     display: flex;
@@ -278,25 +291,21 @@
 
 .meal-btn--breakfast {
     --btn-color: var(--primary-light);
-    --icon-color: var(--primary-dark);
     --btn-shadow: 0 0 3px var(--primary-dark);
 }
 
 .meal-btn--lunch {
     --btn-color: color-mix(in srgb, var(--orange), white 80%);
-    --icon-color: var(--orange);
     --btn-shadow: 0 0 3px var(--orange);
 }
 
 .meal-btn--dinner {
     --btn-color: color-mix(in srgb, var(--blue), white 80%);
-    --icon-color: var(--blue);
     --btn-shadow: 0 0 3px var(--blue);
 }
 
 .meal-btn--snack {
     --btn-color: color-mix(in srgb, var(--red), white 80%);
-    --icon-color: var(--red);
     --btn-shadow: 0 0 3px var(--red);
 }
 
