@@ -48,6 +48,7 @@ function getConsumeCalories() {
 console.log(getConsumeCalories());
 
 function renderMeal() {
+    logs.innerHTML = "";
     state.entries.forEach((entry) => {
         // Create all the element inside the log list
         const mealItem = document.createElement("li");
@@ -68,11 +69,14 @@ function renderMeal() {
         mealCal.classList.add("meal__macros");
         mealCal.textContent = `${entry.calories} kcal`;
 
+        const lineBreak = document.createElement("hr");
+        lineBreak.classList.add("line-break");
+
         mealItem.append(mealInfo, mealCal);
         mealInfo.append(mealType, mealName);
 
         // add that itme into the log
-        logs.append(mealItem);
+        logs.append(mealItem, lineBreak);
     });
 }
 
