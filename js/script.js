@@ -27,7 +27,7 @@ const entries = [
 ];
 
 function renderMeal(entries) {
-    for (entries in state.entries) {
+    for (entry in state.entries) {
         // Create all the element inside the log list
         const mealItem = document.createElement("li");
         mealItem.classList.add("meal__item");
@@ -37,15 +37,15 @@ function renderMeal(entries) {
 
         const mealType = document.createElement("p");
         mealType.classList.add("meal__type");
-        mealType.textContent = entries.mealType;
+        mealType.textContent = entry.mealType;
 
         const mealName = document.createElement("p");
         mealName.classList.add("meal__name");
-        mealName.textContent = entries.name;
+        mealName.textContent = entry.name;
 
         const mealCal = document.createElement("p");
         mealCal.classList.add("meal__macros");
-        mealCal.textContent = `${entries.calories} kcal`;
+        mealCal.textContent = `${entry.calories} kcal`;
 
         mealItem.append(mealInfo, mealCal);
         mealInfo.append(mealType, mealName);
