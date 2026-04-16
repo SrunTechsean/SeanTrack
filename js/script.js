@@ -1,33 +1,54 @@
+const progressWheel = document.querySelector(".progress-ring");
+const progressWheelValue = document.querySelector(".progress-ring__value");
+
+function enableprogressWheel() {
+    progressWheel.setAttribute("role", "progressWheel");
+    progressWheel.setAttribute("aria-valuenow", 2190);
+    progressWheel.setAttribute("aria-live", "polite");
+    progressWheelValue.textContent = progressWheel.ariaValueNow;
+}
+
+enableprogressWheel();
+
+// Log Section logic
 const logs = document.querySelector(".meal");
 const state = {
     goal: 3000,
     entries: [],
 };
 
-function saveEntries() {
-    localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
-}
+loadEntries();
 
 function loadEntries() {
     const storedEntries = localStorage.getItem("SeanTrack-entries");
     state.entries = storedEntries ? JSON.parse(storedEntries) : [];
 }
 
+function addMeal(mealType, name, calories) {
+    const newEntry = {
+        id: crypto.randomUUID(),
+        mealType: mealType,
+        name: name,
+        calories: calories,
+    };
+    state.entries.push(newEntry);
+    saveEntries();
+}
+
+addMeal("Breakfast", "Chicken", 200);
+
+function saveEntries() {
+    localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
+}
+
 function getConsumeCalories() {
     return state.entries.reduce((total, entry) => total + entry.calories, 0);
 }
 
-const entries = [
-    {
-        id: crypto.randomUUID(),
-        mealType: "Breakfast",
-        name: "Chicken and Rice",
-        calories: 520,
-    },
-];
+console.log(getConsumeCalories());
 
-function renderMeal(entries) {
-    for (entry in state.entries) {
+function renderMeal() {
+    state.entries.forEach((entry) => {
         // Create all the element inside the log list
         const mealItem = document.createElement("li");
         mealItem.classList.add("meal__item");
@@ -52,7 +73,7 @@ function renderMeal(entries) {
 
         // add that itme into the log
         logs.append(mealItem);
-    }
+    });
 }
 
-renderMeal(state.entries);
+renderMeal();
