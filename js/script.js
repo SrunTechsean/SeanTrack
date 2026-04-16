@@ -1,19 +1,12 @@
+const root = document.querySelector(":root");
 const progressWheel = document.querySelector(".progress-ring");
 const progressWheelValue = document.querySelector(".progress-ring__value");
-
-function enableprogressWheel() {
-    progressWheel.setAttribute("role", "progressWheel");
-    progressWheel.setAttribute("aria-valuenow", 2190);
-    progressWheel.setAttribute("aria-live", "polite");
-    progressWheelValue.textContent = progressWheel.ariaValueNow;
-}
-
-enableprogressWheel();
 
 // Log Section logic
 const logs = document.querySelector(".meal");
 const state = {
     goal: 3000,
+    consumed: 0,
     entries: [],
 };
 
@@ -44,6 +37,11 @@ function saveEntries() {
 function getConsumeCalories() {
     return state.entries.reduce((total, entry) => total + entry.calories, 0);
 }
+
+function updateConsumed() {
+    state.consumed = getConsumeCalories();
+}
+updateConsumed();
 
 console.log(getConsumeCalories());
 
@@ -81,3 +79,14 @@ function renderMeal() {
 }
 
 renderMeal();
+
+function enableprogressWheel() {
+    progressWheel.setAttribute("role", "progressWheel");
+    progressWheel.setAttribute("aria-valuenow", getConsumeCalories());
+    progressWheel.setAttribute("aria-live", "polite");
+    progressWheelValue.textContent = progressWheel.ariaValueNow;
+
+    root.style.setProperty("--cal-progress", `${getConsumeCalories()}%`);
+}
+
+enableprogressWheel();
