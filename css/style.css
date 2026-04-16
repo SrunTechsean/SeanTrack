@@ -323,7 +323,7 @@
     align-items: center;
 }
 
-.meal__title {
+.meal__type {
     color: var(--text-secondary);
 }
 
