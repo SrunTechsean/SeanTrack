@@ -316,7 +316,7 @@
     padding-bottom: 1rem;
 }
 
-.meal__list {
+.meal__item {
     display: grid;
     grid-template-columns: auto 1fr repeat(3, auto);
     gap: 3rem;
