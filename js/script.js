@@ -151,8 +151,19 @@ const icon = {
 loadEntries();
 
 function loadEntries() {
-    const storedEntries = localStorage.getItem("SeanTrack-entries");
-    state.entries = storedEntries ? JSON.parse(storedEntries) : [];
+    // Ensure that the parse data is valid
+    try {
+        const storedEntries = localStorage.getItem("SeanTrack-entries");
+        if (storedEntries) {
+            const parsed = JSON.parse(storedEntries);
+            state.entries = Array.isArray(parsed) ? parsed : [];
+        } else {
+            state.entries = [];
+        }
+    } catch (e) {
+        console.error("Failed to parse entries from localStorage", e);
+        state.entries = [];
+    }
 }
 
 function addMeal(mealType, name, calories) {
@@ -172,6 +183,10 @@ if (state.entries.length === 0) {
 
 function saveEntries() {
     localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
+}
+
+function removeEntries() {
+    locaStorage;
 }
 
 function getConsumeCalories() {
