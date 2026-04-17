@@ -1,4 +1,5 @@
 const root = document.querySelector(":root");
+const meal = document.querySelector(".meal");
 const progressWheel = document.querySelector(".progress-ring");
 const progressWheelValue = document.querySelector(".progress-ring__value");
 
@@ -174,21 +175,38 @@ function addMeal(mealType, name, calories) {
         calories: calories,
     };
     state.entries.push(newEntry);
+    updateConsumed();
     saveEntries();
 }
 
-// if (state.entries.length === 0) {
-//     addMeal("dinner", "Chicken", 200);
-// }
+addMeal("dinner", "Chicken", 200);
 
 function saveEntries() {
     localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
 }
 
-function removeEntries(id) {
-    const entries = JSON.parse(localStorage.getItem("SeanTrack-entries"));
-    state.entries = entries.filter((entry) => entry.id !== id);
+meal.addEventListener("click", (e) => {
+    const remove = e.target.closest(".trash__icon");
+    if (!remove) return;
+
+    const mealItem = e.target.closest(".meal__item");
+    if (!mealItem) return;
+
+    const entryID = mealItem.dataset.id;
+    removeEntries(entryID);
     saveEntries();
+    updateConsumed();
+
+    // Re-render the display
+    renderMeal();
+    renderProgressSection();
+});
+
+// removeEntries(JSON.parse(localStorage.getItem("SeanTrack-entries"))[0].id);
+function removeEntries(id) {
+    state.entries = state.entries.filter((entry) => entry.id !== id);
+    saveEntries();
+    updateConsumed();
 }
 
 function getConsumeCalories() {
@@ -198,7 +216,6 @@ function getConsumeCalories() {
 function updateConsumed() {
     state.consumed = getConsumeCalories();
 }
-updateConsumed();
 
 console.log(getConsumeCalories());
 
@@ -208,6 +225,7 @@ function renderMeal() {
         // Create all the element inside the log list
         const mealItem = document.createElement("li");
         mealItem.classList.add("meal__item");
+        mealItem.dataset.id = entry.id;
 
         // MealType Icon
         const mealIcon = document.createElement("span");
