@@ -282,6 +282,8 @@ function renderProgressSection() {
         statLabel.textContent = "OVER YOUR GOAL!";
     } else {
         statValue.textContent = `${remainingCal}`;
+        statValue.style.setProperty("color", "var(--primary)");
+        statLabel.textContent = "Remaining";
     }
 
     // Add attribute so the progressWheel renders
