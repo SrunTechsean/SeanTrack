@@ -334,6 +334,10 @@
     border-bottom: groove var(--background-grey);
 }
 
+.meal__name {
+    overflow: hidden;
+}
+
 .meal__type {
     color: var(--text-secondary);
 }
