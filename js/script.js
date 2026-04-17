@@ -177,16 +177,18 @@ function addMeal(mealType, name, calories) {
     saveEntries();
 }
 
-if (state.entries.length === 0) {
-    addMeal("dinner", "Chicken", 200);
-}
+// if (state.entries.length === 0) {
+//     addMeal("dinner", "Chicken", 200);
+// }
 
 function saveEntries() {
     localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
 }
 
-function removeEntries() {
-    locaStorage;
+function removeEntries(id) {
+    const entries = JSON.parse(localStorage.getItem("SeanTrack-entries"));
+    state.entries = entries.filter((entry) => entry.id !== id);
+    saveEntries();
 }
 
 function getConsumeCalories() {
