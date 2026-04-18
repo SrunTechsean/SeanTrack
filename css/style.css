@@ -34,7 +34,7 @@
 }
 
 .header__logo {
-    color: var(--text-primary);
+    color: var(--primary);
 }
 
 .header__menu {
@@ -43,6 +43,7 @@
 }
 
 .header__link {
+    position: relative;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -56,10 +57,20 @@
 
 .header__link:active,
 .header__link:focus {
-    --icon-color: var(--primary-dark);
-    color: var(--primary-dark);
-    background-color: var(--primary-light);
+    --icon-color: var(--primary);
+    color: var(--primary);
 }
+.header__link:active::after,
+.header__link:focus::after {
+    position: absolute;
+    bottom: -11px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    content: "";
+    border-bottom: 2px solid var(--primary);
+}
+
 .profile {
     width: 5rem;
     height: 5rem;
