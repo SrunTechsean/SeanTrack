@@ -235,8 +235,8 @@ function renderMeal() {
                 <p class="meal__name">${entry.name}</p>
             </div>
             <p class="meal__macros">${entry.calories} kcal</p>
-            ${icon[icon.edit]};
-            ${icon[icon.remove]};
+            ${icon.edit}
+            ${icon.remove}
 `;
 
         // add that itme into the log
