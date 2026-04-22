@@ -222,41 +222,22 @@ console.log(getConsumeCalories());
 function renderMeal() {
     logs.innerHTML = "";
     state.entries.forEach((entry) => {
-        // Create all the element inside the log list
+        // Create the Meal Item
         const mealItem = document.createElement("li");
         mealItem.classList.add("meal__item");
         mealItem.dataset.id = entry.id;
 
-        // MealType Icon
-        const mealIcon = document.createElement("span");
-        mealIcon.innerHTML = icon[entry.mealType.toLowerCase()];
-
-        // Container for mealtype and mealname
-        const mealInfo = document.createElement("div");
-        mealInfo.classList.add("meal__info");
-
-        const mealType = document.createElement("p");
-        mealType.classList.add("meal__type");
-        mealType.textContent = entry.mealType;
-
-        const mealName = document.createElement("p");
-        mealName.classList.add("meal__name");
-        mealName.textContent = entry.name;
-
-        // Calorie of the Meal
-        const mealCal = document.createElement("p");
-        mealCal.classList.add("meal__macros");
-        mealCal.textContent = `${entry.calories} kcal`;
-
-        // Edit Icon and Remove Icon
-        const edit = document.createElement("span");
-        edit.innerHTML = icon.edit;
-
-        const remove = document.createElement("span");
-        remove.innerHTML = icon.remove;
-
-        mealItem.append(mealIcon, mealInfo, mealCal, edit, remove);
-        mealInfo.append(mealType, mealName);
+        // Add the infos into the list
+        mealItem.innerHTML = `
+            ${icon[entry.mealType.toLowerCase()]}
+            <div class="meal__info">
+                <p class="meal__type">${entry.mealType}</p>
+                <p class="meal__name">${entry.name}</p>
+            </div>
+            <p class="meal__macros">${entry.calories} kcal</p>
+            ${icon[icon.edit]};
+            ${icon[icon.remove]};
+`;
 
         // add that itme into the log
         logs.append(mealItem);
