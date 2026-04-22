@@ -194,8 +194,6 @@ meal.addEventListener("click", (e) => {
 
     const entryID = mealItem.dataset.id;
     removeEntries(entryID);
-    saveEntries();
-    updateConsumed();
 
     // Re-render the display
     renderMeal();
