@@ -12,8 +12,11 @@
     </head>
     <body>
         <div class="app">
+            <!-- HEADER -->
             <header class="header">
+                <!-- Header Logo Brand -->
                 <h2 class="header__logo">SeanTrack</h2>
+                <!-- Header Nav Bar -->
                 <div class="header__nav">
                     <ul class="header__menu">
                         <li class="header__item">
@@ -102,7 +105,7 @@
                         </li>
                     </ul>
                 </div>
-
+                <!-- Header Profile -->
                 <img
                     src="https://ui-avatars.com/api/?name=Tech+Sean&background=1a92d4&color=fff"
                     alt="Profile"
@@ -315,11 +318,127 @@
                             <h4 class="meal-btn__label">Custom</h4>
                         </button>
                     </div>
+                    <dialog open class="modal">
+                        <form action="" class="modal-form" method="dialog">
+                            <caption class="modal-form__caption">
+                                <div class="modal-form__icon-container">
+                                    <img src="img/" alt="Dining Icon">
+                                </div>
+                                <div class="modal-form__header">
+                                    <h4 class="modal-form__tittle">Quick Add Meal</h4>
+                                    <p class="modal-form__info">
+                                        Log a meal and update your daily total
+                                    </p>
+                                </div>
+                            </caption>
+                            <div class="modal-form__field">
+                                <label class="modal-form__label" for="meal_type">
+                                    Meal Type
+                                </label>
+                                <select
+                                    required
+                                    id="meal_type"
+                                    name="mealType"
+                                    class="modal-form__input required"
+                                >
+                                    <option value="Breakfast">Breakfast</option>
+                                    <option value="Lunch">Lunch</option>
+                                    <option value="Dinner">Dinner</option>
+                                    <option value="Snack">Snack</option>
+                                    <option value="Custom">Custom</option>
+                                </select>
+                                <span class="modal-form__required"></span>
+                            </div>
+                            <div class="modal-form__field">
+                                <label class="modal-form__label" for="meal_name">
+                                    Meal Name
+                                </label>
+                                <input
+                                    required
+                                    class="modal-form__input required"
+                                    type="text"
+                                    id="meal_name"
+                                    name="mealName"
+                                    placeholder="e.g. Chicken and Rice"
+                                >
+                                <span class="modal-form__required"></span>
+                            </div>
+                            <div class="modal-form__field">
+                                <label class="modal-form__label" for="calories">
+                                    Calories
+                                </label>
+                                <input
+                                    required
+                                    class="modal-form__input required"
+                                    type="number"
+                                    id="calories"
+                                    name="calories"
+                                    placeholder="e.g. 420"
+                                >
+                                <span class="suffix">kcal</span>
+                                <span class="modal-form__required"></span>
+                            </div>
+                            <div class="modal-form__field">
+                                <label class="modal-form__label" for="protein">
+                                    Protein
+                                </label>
+                                <input
+                                    required
+                                    class="modal-form__input required"
+                                    type="number"
+                                    id="protein"
+                                    name="protein"
+                                    placeholder="e.g. 24"
+                                >
+                                <span class="suffix">g</span>
+                                <span class="modal-form__required"></span>
+                            </div>
+                            <div class="modal-form__field">
+                                <label class="modal-form__label" for="fat">Fat</label>
+                                <input
+                                    required
+                                    class="modal-form__input required"
+                                    type="number"
+                                    id="fat"
+                                    name="fat"
+                                    placeholder="e.g. 10"
+                                >
+                                <span class="suffix">g</span>
+                                <span class="modal-form__required"></span>
+                            </div>
+                            <div class="modal-form__field">
+                                <label class="modal-form__label" for="carbs">Carbs</label>
+                                <input
+                                    required
+                                    class="modal-form__input required"
+                                    type="number"
+                                    id="carbs"
+                                    name="carbs"
+                                    placeholder="e.g. 40"
+                                >
+                                <span class="suffix">g</span>
+                                <span class="modal-form__required"></span>
+                            </div>
+
+                            <div class="modal-form__field">
+                                <label class="modal-form__label" for="note">Note</label>
+                                <input
+                                    required
+                                    class="modal-form__input required"
+                                    type="text"
+                                    id="note"
+                                    name="note"
+                                    placeholder="Add any note about this meal..."
+                                >
+                                <span class="modal-form__required"></span>
+                            </div>
+                        </form>
+                    </dialog>
                 </section>
                 <section class="log">
                     <div class="log__header">
                         <h3 class="log__tittle">Today's Meal</h3>
-                        <a class="log__link" href="#"><h3>View All Logs-></h3></a>
+                        <a class="log__link link" href="#"><h3>View All Logs-></h3></a>
                     </div>
                     <div class="log-card card">
                         <ul class="meal">
