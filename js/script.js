@@ -167,11 +167,11 @@ function loadEntries() {
     }
 }
 
-function addMeal(mealType, name, calories) {
+function addMeal(mealType, mealName, calories) {
     const newEntry = {
         id: crypto.randomUUID(),
         mealType: mealType,
-        name: name,
+        mealName: mealName,
         calories: calories,
     };
     state.entries.push(newEntry);
@@ -230,7 +230,7 @@ function renderMeal() {
             ${icon[entry.mealType.toLowerCase()]}
             <div class="meal__info">
                 <p class="meal__type">${entry.mealType}</p>
-                <p class="meal__name">${entry.name}</p>
+                <p class="meal__name">${entry.mealName}</p>
             </div>
             <p class="meal__macros">${entry.calories} kcal</p>
             ${icon.edit}
