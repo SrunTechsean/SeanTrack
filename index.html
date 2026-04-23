@@ -359,6 +359,24 @@
                                         Log a meal and update your daily total
                                     </p>
                                 </div>
+                                <div class="modal-form__close close">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon modal-form__close"
+                                    >
+                                        <title>Close Icon</title>
+                                        <path d="M18 6 6 18" />
+                                        <path d="m6 6 12 12" />
+                                    </svg>
+                                </div>
                             </caption>
                             <div class="modal-form__field">
                                 <label class="modal-form__label" for="meal_type">
@@ -460,6 +478,19 @@
                                     placeholder="Add any note about this meal..."
                                 ></textarea>
                                 <span class="modal-form__required"></span>
+                            </div>
+                            <hr>
+                            <div class="modal-form__submit">
+                                <p class="modal-form__clarify">
+                                    ⓘ Fields marked <span class="red">*</span> are
+                                    required
+                                </p>
+                                <button class="btn btn--secondary close" type="button">
+                                    Cancel
+                                </button>
+                                <button id="open" class="btn btn--primary" type="submit">
+                                    ✓⃝ Save Meal
+                                </button>
                             </div>
                         </form>
                     </dialog>
