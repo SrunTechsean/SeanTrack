@@ -1,6 +1,6 @@
 .app {
     display: grid;
-    grid-template-rows: 6rem 1fr;
+    grid-template-rows: auto 1fr;
     height: 100dvh;
     overflow: hidden;
 }
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 min(5rem, 5%);
+    padding: 0.5rem min(5rem, 5%);
     background-color: var(--background-white);
     box-shadow: var(--shadow);
 }
