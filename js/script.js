@@ -284,7 +284,7 @@ function percentageCalculator(total, amount) {
 // localStorage.removeItem("SeanTrack-entries");
 
 // Dialog Section
-const modal = document.getElementById("modal");
+const modal = document.querySelector(".modal");
 const closeButton = document.querySelectorAll(".close");
 const addButton = document.querySelector(".quick-add__body");
 
