@@ -179,12 +179,13 @@ function addMeal(mealType, mealName, calories) {
     saveEntries();
 }
 
-addMeal("dinner", "Chicken", 200);
+// addMeal("dinner", "Chicken", 200);
 
 function saveEntries() {
     localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
 }
 
+// Remove item when click on trashcan icon
 meal.addEventListener("click", (e) => {
     const remove = e.target.closest(".trash__icon");
     if (!remove) return;
@@ -281,3 +282,22 @@ function percentageCalculator(total, amount) {
 }
 
 // localStorage.removeItem("SeanTrack-entries");
+
+// Dialog Section
+const modal = document.getElementById("modal");
+const closeButton = document.querySelectorAll(".close");
+const addButton = document.querySelector(".quick-add__body");
+
+// Close Modal
+closeButton.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        modal.close();
+    });
+});
+
+// Open Modal
+addButton.addEventListener("click", (e) => {
+    const openButton = e.target.closest(".meal-btn");
+    if (!openButton) return;
+    modal.showModal();
+});
