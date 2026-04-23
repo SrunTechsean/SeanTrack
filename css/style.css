@@ -2,7 +2,10 @@
     display: grid;
     grid-template-rows: auto 1fr;
     height: 100dvh;
-    overflow: hidden;
+}
+
+.app > * {
+    min-height: 0;
 }
 
 .icon {
@@ -84,7 +87,7 @@
         "progress macros"
         "add add"
         "log log";
-    grid-template-rows: auto minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-rows: auto minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
     grid-template-columns: 1.5fr 1fr;
     gap: 1rem;
     height: 100%;
