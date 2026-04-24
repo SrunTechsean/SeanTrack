@@ -371,11 +371,14 @@
     grid-template-areas:
         "caption caption"
         "meal-type meal-type"
-        "meal-name meal-anem"
+        "meal-name meal-name"
         "calorie protein"
         "fat carbs"
         "note note"
         "submit submit";
+    row-gap: 1rem;
+
+    column-gap: 2rem;
 }
 
 .modal-form__caption {
