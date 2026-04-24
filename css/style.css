@@ -364,3 +364,21 @@
     color: var(--primary-dark);
     text-decoration: underline;
 }
+
+/* Modal  */
+
+.modal-form__caption {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.modal-form__icon-container {
+    place-items: center;
+    width: 48px;
+    aspect-ratio: 1 / 1;
+}
+
+.modal-form__info {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
