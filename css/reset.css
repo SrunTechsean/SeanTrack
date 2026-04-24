@@ -89,3 +89,8 @@ progress {
     appearance: none;
     border: none;
 }
+
+/* Stop label from displaying in line */
+label {
+    display: block;
+}
