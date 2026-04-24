@@ -366,10 +366,54 @@
 }
 
 /* Modal  */
+.modal-form {
+    display: grid;
+    grid-template-areas:
+        "caption caption"
+        "meal-type meal-type"
+        "meal-name meal-anem"
+        "calorie protein"
+        "fat carbs"
+        "note note"
+        "submit submit";
+}
 
 .modal-form__caption {
     display: grid;
+    grid-area: caption;
     grid-template-columns: repeat(3, auto);
+}
+
+.modal-form__field--meal-type {
+    grid-area: meal-type;
+}
+
+.modal-form__field--meal-name {
+    grid-area: meal-name;
+}
+
+.modal-form__field--calorie {
+    grid-area: calorie;
+}
+
+.modal-form__field--protein {
+    grid-area: protein;
+}
+
+.modal-form__field--fat {
+    grid-area: fat;
+}
+
+.modal-form__field--carbs {
+    grid-area: carbs;
+}
+
+.modal-form__field--note {
+    grid-area: note;
+}
+
+.modal-form__submit {
+    grid-area: submit;
 }
 
 .modal-form__icon-container {
