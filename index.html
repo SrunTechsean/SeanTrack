@@ -329,7 +329,7 @@
                     </div>
                     <dialog class="modal">
                         <form action="" class="modal-form" method="dialog">
-                            <caption class="modal-form__caption">
+                            <div class="modal-form__caption">
                                 <div class="modal-form__icon-container">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -377,14 +377,14 @@
                                         <path d="m6 6 12 12" />
                                     </svg>
                                 </div>
-                            </caption>
-                            <div class="modal-form__field">
-                                <label class="modal-form__label" for="meal_type">
+                            </div>
+                            <div class="modal-form__field--meal-type">
+                                <label class="modal-form__label" for="meal-type">
                                     Meal Type
                                 </label>
                                 <select
                                     required
-                                    id="meal_type"
+                                    id="meal-type"
                                     name="mealType"
                                     class="modal-form__input required"
                                 >
@@ -396,21 +396,21 @@
                                 </select>
                                 <span class="modal-form__required"></span>
                             </div>
-                            <div class="modal-form__field">
-                                <label class="modal-form__label" for="meal_name">
+                            <div class="modal-form__field--meal-name">
+                                <label class="modal-form__label" for="meal-name">
                                     Meal Name
                                 </label>
                                 <input
                                     required
                                     class="modal-form__input required"
                                     type="text"
-                                    id="meal_name"
+                                    id="meal-name"
                                     name="mealName"
                                     placeholder="e.g. Chicken and Rice"
                                 >
                                 <span class="modal-form__required"></span>
                             </div>
-                            <div class="modal-form__field">
+                            <div class="modal-form__field--calorie">
                                 <label class="modal-form__label" for="calories">
                                     Calories
                                 </label>
@@ -425,7 +425,7 @@
                                 <span class="suffix">kcal</span>
                                 <span class="modal-form__required"></span>
                             </div>
-                            <div class="modal-form__field">
+                            <div class="modal-form__field--protein">
                                 <label class="modal-form__label" for="protein">
                                     Protein
                                 </label>
@@ -440,7 +440,7 @@
                                 <span class="suffix">g</span>
                                 <span class="modal-form__required"></span>
                             </div>
-                            <div class="modal-form__field">
+                            <div class="modal-form__field--fat">
                                 <label class="modal-form__label" for="fat">Fat</label>
                                 <input
                                     required
@@ -453,7 +453,7 @@
                                 <span class="suffix">g</span>
                                 <span class="modal-form__required"></span>
                             </div>
-                            <div class="modal-form__field">
+                            <div class="modal-form__field--carbs">
                                 <label class="modal-form__label" for="carbs">Carbs</label>
                                 <input
                                     required
@@ -467,7 +467,7 @@
                                 <span class="modal-form__required"></span>
                             </div>
 
-                            <div class="modal-form__field">
+                            <div class="modal-form__field--note">
                                 <label class="modal-form__label" for="note">Note</label>
                                 <textarea
                                     required
