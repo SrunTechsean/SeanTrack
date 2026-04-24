@@ -366,6 +366,12 @@
 }
 
 /* Modal  */
+input,
+select,
+textarea {
+    --_input-radius: var(--input-radius, var(--radius-sm));
+    border-radius: var(--_input-radius);
+}
 .modal {
     width: 50rem;
     border: none;
@@ -390,7 +396,6 @@
     width: 100%;
     height: 4rem;
     border: 1px solid var(--background-dark-grey);
-    border-radius: var(--radius-sm);
 }
 
 .modal-form__textarea {
@@ -468,7 +473,6 @@
 .suffix {
     grid-area: suffix;
     place-self: center;
-    border
 }
 
 /* Modal Submit Section */
