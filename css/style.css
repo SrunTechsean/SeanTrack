@@ -366,6 +366,11 @@
 }
 
 /* Modal  */
+.modal {
+    width: 50rem;
+    border: none;
+    border-radius: var(--radius-sm);
+}
 .modal-form {
     display: grid;
     grid-template-areas:
@@ -376,9 +381,20 @@
         "fat carbs"
         "note note"
         "submit submit";
-    row-gap: 1rem;
+    row-gap: 1.5rem;
 
     column-gap: 2rem;
+}
+
+.modal-form__input {
+    width: 100%;
+    height: 4rem;
+    border: 1px solid var(--background-grey);
+    border-radius: var(--radius-sm);
+}
+
+.modal-form__textarea {
+    height: 10rem;
 }
 
 .modal-form__caption {
@@ -426,6 +442,40 @@
 }
 
 .modal-form__info {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Modal Submit Section */
+.btn--primary {
+    width: 20rem;
+    aspect-ratio: 5 / 1;
+    font-weight: 600;
+    color: var(--background-white);
+    background-color: var(--primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    transition: background-color 1s ease;
+}
+
+.btn--secondary {
+    width: 20rem;
+    aspect-ratio: 5 / 1;
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--background-grey);
+    border: 1px solid var(--text-secondary);
+    border-radius: var(--radius-sm);
+    transition: background-color 1s ease;
+}
+
+.btn--primary:hover {
+    color: var(--primary);
+    background-color: var(--background-white);
+    border: 2px solid var(--primary);
+}
+
+.modal-form__clarify {
     font-size: 1.2rem;
     color: var(--text-secondary);
 }
