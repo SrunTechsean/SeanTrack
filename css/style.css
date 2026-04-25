@@ -556,3 +556,7 @@ textarea {
     font-size: 1.2rem;
     color: var(--text-secondary);
 }
+
+.highlight--red {
+    color: var(--red);
+}
