@@ -373,7 +373,7 @@ textarea {
     border-radius: var(--_input-radius);
 }
 .modal {
-    width: 50rem;
+    padding: 2rem 2.5rem;
     border: none;
     border-radius: var(--radius-sm);
 }
