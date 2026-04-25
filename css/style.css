@@ -438,7 +438,7 @@ textarea {
 /* Form Field */
 .modal-form__label,
 .macros-field__label {
-    font-weight: 600;
+    font-weight: 500;
 }
 .modal-form__field--meal-type {
     grid-area: meal-type;
