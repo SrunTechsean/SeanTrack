@@ -410,7 +410,7 @@ textarea {
 .modal-form__caption {
     display: flex;
     grid-area: caption;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .modal-form__icon-container {
@@ -436,6 +436,10 @@ textarea {
 }
 
 /* Form Field */
+.modal-form__label,
+.macros-field__label {
+    font-weight: 600;
+}
 .modal-form__field--meal-type {
     grid-area: meal-type;
 }
