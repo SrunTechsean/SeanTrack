@@ -404,15 +404,22 @@ textarea {
 
 /* Modal Form Caption */
 .modal-form__caption {
-    display: grid;
+    display: flex;
     grid-area: caption;
-    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
 }
 
 .modal-form__icon-container {
+    display: grid;
     place-items: center;
     width: 48px;
     aspect-ratio: 1 / 1;
+    background-color: var(--primary-light);
+    border-radius: var(--radius-md);
+}
+
+.modal-form__close {
+    margin-left: auto;
 }
 
 .modal-form__info {
