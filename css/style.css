@@ -416,7 +416,7 @@ textarea {
 .modal-form__icon-container {
     display: grid;
     place-items: center;
-    width: 48px;
+    height: auto;
     aspect-ratio: 1 / 1;
     background-color: var(--primary-light);
     border-radius: var(--radius-md);
