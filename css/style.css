@@ -26,6 +26,10 @@
     --icon-color: var(--red);
 }
 
+.icon--dining {
+    --icon-color: var(--primary-dark);
+}
+
 .header {
     z-index: 1;
     display: flex;
