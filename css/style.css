@@ -418,6 +418,10 @@ textarea {
     border-radius: var(--radius-md);
 }
 
+.modal-form__header {
+    align-self: center;
+}
+
 .modal-form__close {
     margin-left: auto;
 }
