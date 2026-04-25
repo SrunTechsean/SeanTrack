@@ -447,6 +447,8 @@ textarea {
 
 .modal-form__field--note {
     grid-area: note;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--background-dark-grey);
 }
 
 .modal-form__submit {
@@ -462,17 +464,29 @@ textarea {
     grid-template-columns: auto 4rem;
 }
 
-.modal-form__label {
+.macros-field__label {
     grid-area: label;
 }
 
-.modal-form__input {
+.macros-field__input {
+    --input-radius: 8px 0 0 8px;
     grid-area: input;
+    height: 4rem;
+    border: 1px solid var(--background-dark-grey);
+    border-radius: var(--_input-radius);
 }
 
 .suffix {
+    display: flex;
     grid-area: suffix;
-    place-self: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--background-grey);
+    border: 1px solid var(--background-dark-grey);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
 }
 
 /* Modal Submit Section */
