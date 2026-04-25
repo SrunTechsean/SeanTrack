@@ -374,6 +374,7 @@ input,
 select,
 textarea {
     --_input-radius: var(--input-radius, var(--radius-sm));
+    padding: 1rem;
     border-radius: var(--_input-radius);
 }
 .modal {
