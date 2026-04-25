@@ -381,6 +381,10 @@ textarea {
     border: none;
     border-radius: var(--radius-sm);
 }
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+}
 .modal-form {
     display: grid;
     grid-template-areas:
