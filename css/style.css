@@ -470,10 +470,6 @@ textarea {
     border-bottom: 1px solid var(--background-dark-grey);
 }
 
-.modal-form__submit {
-    grid-area: submit;
-}
-
 /* Form Field macros section */
 .macros-field {
     display: grid;
@@ -509,26 +505,24 @@ textarea {
 }
 
 /* Modal Submit Section */
+.modal-form__submit {
+    grid-area: submit;
+}
+
+.modal-form__btn-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
 .btn--primary {
-    width: 20rem;
-    aspect-ratio: 5 / 1;
+    aspect-ratio: 6 / 1;
     font-weight: 600;
     color: var(--background-white);
     background-color: var(--primary);
     border: none;
     border-radius: var(--radius-sm);
-    transition: background-color 1s ease;
-}
-
-.btn--secondary {
-    width: 20rem;
-    aspect-ratio: 5 / 1;
-    font-weight: 600;
-    color: var(--text-primary);
-    background-color: var(--background-grey);
-    border: 1px solid var(--text-secondary);
-    border-radius: var(--radius-sm);
-    transition: background-color 1s ease;
+    transition: all 1s ease;
 }
 
 .btn--primary:hover {
@@ -537,7 +531,23 @@ textarea {
     border: 2px solid var(--primary);
 }
 
+.btn--secondary {
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--background-grey);
+    border: 1px solid var(--background-dark-grey);
+    border-radius: var(--radius-sm);
+    transition: all 1s ease;
+}
+
+.btn--secondary:hover {
+    color: var(--primary);
+    background-color: var(--background-white);
+    border: 2px solid var(--primary);
+}
+
 .modal-form__clarify {
+    padding-bottom: 1.5rem;
     font-size: 1.2rem;
     color: var(--text-secondary);
 }
