@@ -8,6 +8,9 @@ const logs = document.querySelector(".meal");
 const state = {
     goal: 3000,
     consumed: 0,
+    protein: 0,
+    fat: 0,
+    carbs: 0,
     entries: [],
 };
 
@@ -295,7 +298,6 @@ modal.addEventListener("click", (e) => {
 addButton.addEventListener("click", (e) => {
     const openButton = e.target.closest(".meal-btn");
     if (!openButton) return;
-    console.log("correct");
     modal.showModal();
 });
 
