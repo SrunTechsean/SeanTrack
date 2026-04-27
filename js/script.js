@@ -335,4 +335,6 @@ function updateUI() {
     renderProgressSection();
 }
 
+// After refresh, Since my state object give macros value of 0, I need to Update the Consumed again to show the correct macros
+updateConsumed();
 updateUI();
