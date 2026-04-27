@@ -3,6 +3,18 @@ const meal = document.querySelector(".meal");
 const progressWheel = document.querySelector(".progress-ring");
 const progressWheelValue = document.querySelector(".progress-ring__value");
 
+// Grab Modal form element
+const modal = {
+    modalDialog: document.querySelector(".modal"),
+    modalForm: document.querySelector(".modal-form"),
+    mealTypeInput: document.querySelector("#meal-type"),
+    mealNameInput: document.querySelector("#meal-name"),
+    mealCaloriesInput: document.querySelector("#calories"),
+    mealProteinInput: document.querySelector("#protein"),
+    mealFatInput: document.querySelector("#fat"),
+    mealCarbsInput: document.querySelector("#carbs"),
+};
+
 // Log Section logic
 const logs = document.querySelector(".meal");
 const state = {
@@ -204,6 +216,7 @@ meal.addEventListener("click", (e) => {
     renderProgressSection();
 });
 
+// Help me debug sth i forgot
 // removeEntries(JSON.parse(localStorage.getItem("SeanTrack-entries"))[0].id);
 function removeEntries(id) {
     state.entries = state.entries.filter((entry) => entry.id !== id);
@@ -285,10 +298,9 @@ function percentageCalculator(total, amount) {
 // localStorage.removeItem("SeanTrack-entries");
 
 // Dialog Section
-const modal = document.querySelector(".modal");
 const addButton = document.querySelector(".quick-add__body");
 
-modal.addEventListener("click", (e) => {
+modal.modalDialog.addEventListener("click", (e) => {
     if (e.target.closest(".close")) {
         modal.close();
     }
@@ -298,30 +310,23 @@ modal.addEventListener("click", (e) => {
 addButton.addEventListener("click", (e) => {
     const openButton = e.target.closest(".meal-btn");
     if (!openButton) return;
-    modal.showModal();
+    modal.modalDialog.showModal();
 });
 
 // Connect Modal to UI
-// Grab form element
-const modalForm = document.querySelector(".modal-form");
-const mealTypeInput = document.querySelector("#meal-type");
-const mealNameInput = document.querySelector("#meal-name");
-const mealCaloriesInput = document.querySelector("#calories");
-const mealProteinInput = document.querySelector("#protein");
-const mealFatInput = document.querySelector("#fat");
-const mealCarbsInput = document.querySelector("#carbs");
 
 // Listen for submit
-modalForm.addEventListener("submit", (e) => {
+modal.modalForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const mealType = mealTypeInput.value.toLowerCase();
-    const name = mealNameInput.value.trim();
-    const calories = Number(mealCaloriesInput.value);
+    const mealType = modal.mealTypeInput.value.toLowerCase();
+    const name = modal.mealNameInput.value.trim();
+    const calories = Number(modal.mealCaloriesInput.value);
 
     addMeal(mealType, name, calories);
-    modal.close();
     updateUI();
+
+    modal.modalDialog.close();
 });
 
 // Create an updateUI function
