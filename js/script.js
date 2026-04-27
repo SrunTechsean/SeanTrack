@@ -19,7 +19,7 @@ const modal = {
 const logs = document.querySelector(".meal");
 const state = {
     goal: 3000,
-    consumed: 0,
+    calories: 0,
     protein: 0,
     fat: 0,
     carbs: 0,
@@ -190,7 +190,7 @@ function addMeal(mealType, mealName, calories) {
         calories: calories,
     };
     state.entries.push(newEntry);
-    updateConsumed();
+    updateConsumed(state);
     saveEntries();
 }
 
@@ -221,18 +221,26 @@ meal.addEventListener("click", (e) => {
 function removeEntries(id) {
     state.entries = state.entries.filter((entry) => entry.id !== id);
     saveEntries();
-    updateConsumed();
+    updateConsumed(state);
 }
 
-function getConsumeCalories() {
-    return state.entries.reduce((total, entry) => total + entry.calories, 0);
+// Parameter macros store the string of Calories, Protein, Fat, Carbs
+function getConsumed(macros) {
+    return state.entries.reduce((total, entry) => total + entry[macros], 0);
 }
 
-function updateConsumed() {
-    state.consumed = getConsumeCalories();
+// This function Update any macros listed in the global state object
+function updateConsumed(state) {
+    for (const macros in state) {
+        // Ignore properties that do not need to be updated
+        if (macros === "goal") {
+            continue;
+        } else if (macros === "entries") {
+            continue;
+        }
+        state[macros] = getConsumed(macros);
+    }
 }
-
-console.log(getConsumeCalories());
 
 function renderMeal() {
     logs.innerHTML = "";
@@ -264,7 +272,7 @@ function renderProgressSection() {
     const statValue = document.querySelector(".stat__value");
     const statLabel = document.querySelector(".stat__label");
 
-    const remainingCal = state.goal - state.consumed;
+    const remainingCal = state.goal - state.calories;
 
     // Render Calorie Goal Badge
     badge.textContent = `Goal: ${state.goal} kcal`;
@@ -282,11 +290,11 @@ function renderProgressSection() {
 
     // Add attribute so the progressWheel renders
     progressWheel.setAttribute("role", "progressWheel");
-    progressWheel.setAttribute("aria-valuenow", state.consumed);
+    progressWheel.setAttribute("aria-valuenow", state.calories);
     progressWheel.setAttribute("aria-live", "polite");
     progressWheelValue.textContent = progressWheel.ariaValueNow;
 
-    root.style.setProperty("--cal-progress", `${percentageCalculator(state.goal, state.consumed)}%`);
+    root.style.setProperty("--cal-progress", `${percentageCalculator(state.goal, state.calories)}%`);
 }
 
 renderProgressSection();
@@ -336,5 +344,5 @@ function updateUI() {
 }
 
 // After refresh, Since my state object give macros value of 0, I need to Update the Consumed again to show the correct macros
-updateConsumed();
+updateConsumed(state);
 updateUI();
