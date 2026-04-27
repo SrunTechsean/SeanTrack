@@ -307,7 +307,21 @@ addButton.addEventListener("click", (e) => {
 const modalForm = document.querySelector(".modal-form");
 const mealTypeInput = document.querySelector("#meal-type");
 const mealNameInput = document.querySelector("#meal-name");
-const caloriesInput = document.querySelector("#calories");
-const proteinInput = document.querySelector("#protein");
-const fatInput = document.querySelector("#fat");
-const carbsInput = document.querySelector("#carbs");
+const mealcaloriesInput = document.querySelector("#calories");
+const mealproteinInput = document.querySelector("#protein");
+const mealfatInput = document.querySelector("#fat");
+const mealcarbsInput = document.querySelector("#carbs");
+
+// Listen for submit
+modalForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const mealType = mealTypeInput.value.toLowerCase();
+    const name = mealNameInput.value.trim();
+    const calories = Number(mealCaloriesInput.value);
+
+    addMeal(mealType, name, calories);
+    updateUI();
+});
+
+// TODO: create an updateUI function
