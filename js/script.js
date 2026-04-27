@@ -243,8 +243,6 @@ function renderMeal() {
     });
 }
 
-renderMeal();
-
 function renderProgressSection() {
     const badge = document.querySelector(".badge");
     const statValue = document.querySelector(".stat__value");
@@ -285,20 +283,19 @@ function percentageCalculator(total, amount) {
 
 // Dialog Section
 const modal = document.querySelector(".modal");
-const closeButton = document.querySelectorAll(".close");
 const addButton = document.querySelector(".quick-add__body");
 
-// Close Modal
-closeButton.forEach((btn) => {
-    btn.addEventListener("click", () => {
+modal.addEventListener("click", (e) => {
+    if (e.target.closest(".close")) {
         modal.close();
-    });
+    }
 });
 
 // Open Modal
 addButton.addEventListener("click", (e) => {
     const openButton = e.target.closest(".meal-btn");
     if (!openButton) return;
+    console.log("correct");
     modal.showModal();
 });
 
@@ -307,10 +304,10 @@ addButton.addEventListener("click", (e) => {
 const modalForm = document.querySelector(".modal-form");
 const mealTypeInput = document.querySelector("#meal-type");
 const mealNameInput = document.querySelector("#meal-name");
-const mealcaloriesInput = document.querySelector("#calories");
-const mealproteinInput = document.querySelector("#protein");
-const mealfatInput = document.querySelector("#fat");
-const mealcarbsInput = document.querySelector("#carbs");
+const mealCaloriesInput = document.querySelector("#calories");
+const mealProteinInput = document.querySelector("#protein");
+const mealFatInput = document.querySelector("#fat");
+const mealCarbsInput = document.querySelector("#carbs");
 
 // Listen for submit
 modalForm.addEventListener("submit", (e) => {
@@ -321,7 +318,14 @@ modalForm.addEventListener("submit", (e) => {
     const calories = Number(mealCaloriesInput.value);
 
     addMeal(mealType, name, calories);
+    modal.close();
     updateUI();
 });
 
-// TODO: create an updateUI function
+// Create an updateUI function
+function updateUI() {
+    renderMeal();
+    renderProgressSection();
+}
+
+updateUI();
