@@ -301,3 +301,13 @@ addButton.addEventListener("click", (e) => {
     if (!openButton) return;
     modal.showModal();
 });
+
+// Connect Modal to UI
+// Grab form element
+const modalForm = document.querySelector(".modal-form");
+const mealTypeInput = document.querySelector("#meal-type");
+const mealNameInput = document.querySelector("#meal-name");
+const caloriesInput = document.querySelector("#calories");
+const proteinInput = document.querySelector("#protein");
+const fatInput = document.querySelector("#fat");
+const carbsInput = document.querySelector("#carbs");
