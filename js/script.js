@@ -302,7 +302,7 @@ const addButton = document.querySelector(".quick-add__body");
 
 modal.modalDialog.addEventListener("click", (e) => {
     if (e.target.closest(".close")) {
-        modal.close();
+        modal.modalDialog.close();
     }
 });
 
