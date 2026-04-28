@@ -334,6 +334,8 @@
 
 .log-card {
     height: 22rem;
+    /* remove top padding from card so that the meal__item can have simple logic of top n bottom padding of 1rem */
+    padding-top: 0;
     overflow: auto;
 }
 
@@ -348,7 +350,8 @@
     grid-template-columns: auto 1fr repeat(3, auto);
     gap: 3rem;
     align-items: center;
-    padding-bottom: 1rem;
+    /* add top-bottom padding 1rem so that each item looks organize and clean  */
+    padding: 1rem 0;
     border-bottom: groove var(--background-grey);
 }
 
