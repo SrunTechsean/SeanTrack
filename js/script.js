@@ -19,6 +19,9 @@ const modal = {
 const logs = document.querySelector(".meal");
 const state = {
     goal: 3000,
+    proteinGoal: 130,
+    fatGoal: 100,
+    carbsGoal: 400,
     calories: 0,
     protein: 0,
     fat: 0,
@@ -218,8 +221,7 @@ meal.addEventListener("click", (e) => {
     removeEntries(entryID);
 
     // Re-render the display
-    renderMeal();
-    renderProgressSection();
+    updateUI();
 });
 
 // Help me debug sth i forgot
@@ -299,13 +301,35 @@ function renderProgressSection() {
 }
 
 function renderMacros() {
+    // Get the prgress bar
     const proteinProgress = document.querySelector(".macros__bar--protein");
     const fatProgress = document.querySelector(".macros__bar--fat");
     const carbsProgress = document.querySelector(".macros__bar--carbs");
 
-    proteinProgress.value = state.protein;
-    fatProgress.value = state.fat;
-    carbsProgress.value = state.carbs;
+    // Get the macros target text
+    const proteinGoal = document.querySelector(".macros__target--protein");
+    const fatGoal = document.querySelector(".macros__target--fat");
+    const carbsGoal = document.querySelector(".macros__target--carbs");
+
+    // Get the macros current progress text
+    const proteinCurrent = document.querySelector(".macros__current--protein");
+    const fatCurrent = document.querySelector(".macros__current--fat");
+    const carbsCurrent = document.querySelector(".macros__current--carbs");
+
+    // Input the percentage of it compare to 100%
+    proteinProgress.value = percentageCalculator(state.proteinGoal, state.protein);
+    fatProgress.value = percentageCalculator(state.fatGoal, state.fat);
+    carbsProgress.value = percentageCalculator(state.carbsGoal, state.carbs);
+
+    // Set the taget Goal
+    proteinGoal.textContent = state.proteinGoal;
+    fatGoal.textContent = state.fatGoal;
+    carbsGoal.textContent = state.carbsGoal;
+
+    // Set the macros current progress
+    proteinCurrent.textContent = state.protein;
+    fatCurrent.textContent = state.fat;
+    carbsCurrent.textContent = state.carbs;
 }
 
 // Dialog Section
