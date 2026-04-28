@@ -26,6 +26,9 @@ const state = {
     entries: [],
 };
 
+// Macros List so that updateConsumed funct easily loop through macros and not the state obj with properties other than macros
+const macrosList = ["calories", "protein", "fat", "carbs"];
+
 const icon = {
     breakfast: `<svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -234,13 +237,8 @@ function getConsumed(macros) {
 
 // This function Update any macros listed in the global state object
 function updateConsumed(state) {
-    for (const macros in state) {
+    for (const macros of macrosList) {
         // Ignore properties that do not need to be updated
-        if (macros === "goal") {
-            continue;
-        } else if (macros === "entries") {
-            continue;
-        }
         state[macros] = getConsumed(macros);
     }
 }
