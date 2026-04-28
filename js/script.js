@@ -300,9 +300,15 @@ function renderProgressSection() {
     root.style.setProperty("--cal-progress", `${percentageCalculator(state.goal, state.calories)}%`);
 }
 
-renderProgressSection();
+function renderMacros() {
+    const proteinProgress = document.querySelector(".macros__bar--protein");
+    const fatProgress = document.querySelector(".macros__bar--fat");
+    const carbsProgress = document.querySelector(".macros__bar--carbs");
 
-// localStorage.removeItem("SeanTrack-entries");
+    proteinProgress.value = state.protein;
+    fatProgress.value = state.fat;
+    carbsProgress.value = state.carbs;
+}
 
 // Dialog Section
 const addButton = document.querySelector(".quick-add__body");
@@ -339,6 +345,7 @@ modal.modalForm.addEventListener("submit", (e) => {
 
 // A function to update the entire UI without me needing to call every render function
 function updateUI() {
+    renderMacros();
     renderMeal();
     renderProgressSection();
 }
