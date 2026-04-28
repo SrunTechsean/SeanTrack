@@ -364,6 +364,11 @@ modal.modalForm.addEventListener("submit", (e) => {
     const fat = Number(modal.mealFatInput.value);
     const carbs = Number(modal.mealCarbsInput.value);
 
+    // Validate entry to prevent invalid input going through
+    if (!name || calories < 0 || protein < 0 || fat < 0 || carbs < 0) {
+        return;
+    }
+
     addMeal(mealType, name, calories, protein, fat, carbs);
     updateUI();
 
