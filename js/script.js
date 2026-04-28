@@ -362,6 +362,7 @@ modal.modalForm.addEventListener("submit", (e) => {
     addMeal(mealType, name, calories, protein, fat, carbs);
     updateUI();
 
+    modal.modalForm.reset();
     modal.modalDialog.close();
 });
 
