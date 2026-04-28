@@ -302,10 +302,6 @@ function renderProgressSection() {
 
 renderProgressSection();
 
-function percentageCalculator(total, amount) {
-    return ((amount * 100) / total).toFixed(2);
-}
-
 // localStorage.removeItem("SeanTrack-entries");
 
 // Dialog Section
@@ -324,9 +320,7 @@ addButton.addEventListener("click", (e) => {
     modal.modalDialog.showModal();
 });
 
-// Connect Modal to UI
-
-// Listen for submit
+// Listen for submit inside form
 modal.modalForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -343,7 +337,7 @@ modal.modalForm.addEventListener("submit", (e) => {
     modal.modalDialog.close();
 });
 
-// Create an updateUI function
+// A function to update the entire UI without me needing to call every render function
 function updateUI() {
     renderMeal();
     renderProgressSection();
@@ -352,3 +346,9 @@ function updateUI() {
 // After refresh, Since my state object give macros value of 0, I need to Update the Consumed again to show the correct macros
 updateConsumed(state);
 updateUI();
+
+// Calculate the percentage of amount compare to the total
+// This is for values in progres bar and (--cal-progress) for progress wheel
+function percentageCalculator(total, amount) {
+    return ((amount * 100) / total).toFixed(2);
+}
