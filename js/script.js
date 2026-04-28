@@ -257,7 +257,7 @@ function renderMeal() {
         mealItem.innerHTML = `
             ${icon[entry.mealType.toLowerCase()]}
             <div class="meal__info">
-                <p class="meal__type">${entry.mealType}</p>
+                <p class="meal__type">${capitalize(entry.mealType)}</p>
                 <p class="meal__name">${entry.mealName}</p>
             </div>
             <p class="meal__macros">${entry.calories} kcal</p>
@@ -381,4 +381,9 @@ updateUI();
 // This is for values in progres bar and (--cal-progress) for progress wheel
 function percentageCalculator(total, amount) {
     return ((amount * 100) / total).toFixed(2);
+}
+
+// Helper function so that meal__type breakfast become Breakfast
+function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
 }
