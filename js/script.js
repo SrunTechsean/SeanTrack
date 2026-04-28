@@ -182,12 +182,15 @@ function loadEntries() {
     }
 }
 
-function addMeal(mealType, mealName, calories) {
+function addMeal(mealType, mealName, calories, protein, fat, carbs) {
     const newEntry = {
         id: crypto.randomUUID(),
         mealType: mealType,
         mealName: mealName,
         calories: calories,
+        protein: protein,
+        fat: fat,
+        carbs: carbs,
     };
     state.entries.push(newEntry);
     updateConsumed(state);
@@ -330,8 +333,11 @@ modal.modalForm.addEventListener("submit", (e) => {
     const mealType = modal.mealTypeInput.value.toLowerCase();
     const name = modal.mealNameInput.value.trim();
     const calories = Number(modal.mealCaloriesInput.value);
+    const protein = Number(modal.mealProteinInput.value);
+    const fat = Number(modal.mealFatInput.value);
+    const carbs = Number(modal.mealCarbsInput.value);
 
-    addMeal(mealType, name, calories);
+    addMeal(mealType, name, calories, protein, fat, carbs);
     updateUI();
 
     modal.modalDialog.close();
