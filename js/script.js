@@ -211,17 +211,26 @@ function saveEntries() {
 // Remove and Edit entries
 meal.addEventListener("click", (e) => {
     const remove = e.target.closest(".trash__icon");
-    if (!remove) return;
+    const edit = e.target.closest(".edit__icon");
+    if (!remove && !edit) return;
 
     const mealItem = e.target.closest(".meal__item");
-    if (!mealItem) return;
-
     const entryID = mealItem.dataset.id;
-    removeEntries(entryID);
+
+    if (remove) {
+        removeEntries(entryID);
+    } else if (edit) {
+        openEditModal(entryID);
+    }
 
     // Re-render the display
     updateUI();
 });
+
+// Function to open the modal in editing mode
+function openEditModal(entryID) {
+    console.log("Editing modal opened");
+}
 
 function removeEntries(id) {
     state.entries = state.entries.filter((entry) => entry.id !== id);
