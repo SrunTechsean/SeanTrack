@@ -27,6 +27,7 @@ const state = {
     fat: 0,
     carbs: 0,
     entries: [],
+    editingID: null,
 };
 
 // Macros List so that updateConsumed funct easily loop through macros and not the state obj with properties other than macros
@@ -203,13 +204,11 @@ function addMeal(mealType, mealName, calories, protein, fat, carbs) {
     saveEntries();
 }
 
-// addMeal("dinner", "Chicken", 200);
-
 function saveEntries() {
     localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
 }
 
-// Remove item when click on trashcan icon
+// Remove and Edit entries
 meal.addEventListener("click", (e) => {
     const remove = e.target.closest(".trash__icon");
     if (!remove) return;
@@ -224,8 +223,6 @@ meal.addEventListener("click", (e) => {
     updateUI();
 });
 
-// Help me debug sth i forgot
-// removeEntries(JSON.parse(localStorage.getItem("SeanTrack-entries"))[0].id);
 function removeEntries(id) {
     state.entries = state.entries.filter((entry) => entry.id !== id);
     saveEntries();
