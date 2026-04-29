@@ -390,11 +390,18 @@ modal.modalForm.addEventListener("submit", (e) => {
         return;
     }
 
-    addMeal(mealType, name, calories, protein, fat, carbs);
-    updateUI();
+    // state.editingID means that a meal is currently being edited and is not a new meal log
+    if (state.editingID) {
+        updateMeal(mealType, name, calories, protein, fat, carbs);
+    } else {
+        addMeal(mealType, name, calories, protein, fat, carbs);
+    }
 
+    state.editingID = null;
     modal.modalForm.reset();
     modal.modalDialog.close();
+
+    updateUI();
 });
 
 // A function to update the entire UI without me needing to call every render function
