@@ -204,6 +204,22 @@ function addMeal(mealType, mealName, calories, protein, fat, carbs) {
     saveEntries();
 }
 
+// Find method return a reference to the original element since I edited the returned element(entry) the original state.entries is updated as well
+function updateMeal(mealType, mealName, calories, protein, fat, carbs) {
+    const entry = state.entries.find((entry) => entry.id === state.editingID);
+    if (!entry) return;
+
+    entry.mealType = mealType;
+    entry.mealName = mealName;
+    entry.calories = calories;
+    entry.protein = protein;
+    entry.fat = fat;
+    entry.carbs = carbs;
+
+    updateConsumed(state);
+    saveEntries;
+}
+
 function saveEntries() {
     localStorage.setItem("SeanTrack-entries", JSON.stringify(state.entries));
 }
