@@ -227,9 +227,24 @@ meal.addEventListener("click", (e) => {
     updateUI();
 });
 
-// Function to open the modal in editing mode
+// Function to open the modal with existing data
 function openEditModal(entryID) {
-    console.log("Editing modal opened");
+    // find > filter here cuz find return the single first element which in this case is the first obj, so I can use entry.mealType
+    // If I use filter it will return a new array with the first obj then to access it i need to use sth like entry[0].mealType
+    const entry = state.entries.find((entry) => entry.id === entryID);
+
+    // Track current editing ID
+    state.editingID = entryID;
+
+    // Use capitalize funct to match with <option> Value properties
+    modal.mealTypeInput.value = capitalize(entry.mealType);
+    modal.mealNameInput.value = entry.mealName;
+    modal.mealCaloriesInput.value = entry.calories;
+    modal.mealProteinInput.value = entry.protein;
+    modal.mealFatInput.value = entry.fat;
+    modal.mealCarbsInput.value = entry.carbs;
+
+    modal.modalDialog.showModal();
 }
 
 function removeEntries(id) {
@@ -359,7 +374,7 @@ addButton.addEventListener("click", (e) => {
     modal.modalDialog.showModal();
 });
 
-// Listen for submit inside form
+// Listen for submission
 modal.modalForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
