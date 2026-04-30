@@ -28,7 +28,13 @@ const state = {
     carbs: 0,
     entries: [],
     editingID: null,
+    date: new Date(),
 };
+const formattedDate = state.date.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+});
 
 // Macros List so that updateConsumed funct easily loop through macros and not the state obj with properties other than macros
 const macrosList = ["calories", "protein", "fat", "carbs"];
@@ -198,7 +204,7 @@ function addMeal(mealType, mealName, calories, protein, fat, carbs) {
         protein: protein,
         fat: fat,
         carbs: carbs,
-        dateISO: new Date().toISOString(),
+        dateISO: state.date.toISOString(),
     };
     state.entries.push(newEntry);
     updateConsumed(state);
@@ -283,10 +289,11 @@ function updateConsumed(state) {
         state[macros] = getConsumed(macros);
     }
 }
+
 // Helper function to know if the entry is entered today
 function isToday(dateISO) {
     const entryDate = new Date(dateISO);
-    const today = new Date();
+    const today = state.date;
 
     // If year, month, and day is the same return true
     return entryDate.getFullYear() === today.getFullYear() && entryDate.getMonth() === today.getMonth() && entryDate.getDate() === today.getDate();
@@ -296,8 +303,6 @@ function isToday(dateISO) {
 function getTodayEntries() {
     return state.entries.filter((entry) => isToday(entry.dateISO));
 }
-
-console.log(getTodayEntries);
 
 // Make this only render today's entries
 function renderMeal() {
