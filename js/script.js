@@ -178,7 +178,14 @@ const icon = {
                                 </svg>`,
 };
 
-// TODO: Get date input
+// Get date input
+dateInput.addEventListener("change", () => {
+    const currentDate = document.querySelector(".date-picker__input").value;
+    state.date = new Date(currentDate);
+
+    updateConsumed();
+    updateUI();
+});
 
 loadEntries();
 
@@ -286,7 +293,7 @@ function getConsumed(macros) {
 }
 
 // This function Update any macros listed in the global state object
-function updateConsumed(state) {
+function updateConsumed() {
     for (const macros of macrosList) {
         // Ignore properties that do not need to be updated
         state[macros] = getConsumed(macros);
@@ -461,7 +468,7 @@ function updateUI() {
 }
 
 // After refresh, Since my state object give macros value of 0, I need to Update the Consumed again to show the correct macros
-updateConsumed(state);
+updateConsumed();
 updateUI();
 
 // Calculate the percentage of amount compare to the total
