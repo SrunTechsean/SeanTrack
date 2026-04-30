@@ -31,11 +31,6 @@ const state = {
     editingID: null,
     date: new Date(),
 };
-const formattedDate = state.date.toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-});
 
 // Macros List so that updateConsumed funct easily loop through macros and not the state obj with properties other than macros
 const macrosList = ["calories", "protein", "fat", "carbs"];
@@ -317,6 +312,12 @@ function getTodayEntries() {
 // Render Main Header
 function renderHeader() {
     const date = document.querySelector(".main__date");
+    const formattedDate = state.date.toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+    });
+
     date.textContent = formattedDate;
 }
 
