@@ -283,6 +283,13 @@ function updateConsumed(state) {
     }
 }
 // TODO: Helper function to know if the entry is entered today
+function isToday(dateISO) {
+    const entryDate = new Date(dateISO);
+    const today = new Date();
+
+    // If year, month, and day is the same return true
+    return entryDate.getFullYear() === today.getFullYear() && entryDate.getMonth() === today.getMonth() && entryDate.getDate() === today.getDate();
+}
 
 // TODO: Function to get today's entries
 function getTodayEntries() {
