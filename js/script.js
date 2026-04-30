@@ -2,6 +2,7 @@ const root = document.querySelector(":root");
 const meal = document.querySelector(".meal");
 const progressWheel = document.querySelector(".progress-ring");
 const progressWheelValue = document.querySelector(".progress-ring__value");
+const dateInput = document.querySelector(".date-picker");
 
 // Grab Modal form element
 const modal = {
@@ -177,6 +178,8 @@ const icon = {
                                 </svg>`,
 };
 
+// TODO: Get date input
+
 loadEntries();
 
 function loadEntries() {
@@ -290,7 +293,7 @@ function updateConsumed(state) {
     }
 }
 
-// Helper function to know if the entry is entered today
+// Get today entry but Today here is talking about the inputted today
 function isToday(dateISO) {
     const entryDate = new Date(dateISO);
     const today = state.date;
@@ -302,6 +305,12 @@ function isToday(dateISO) {
 // Function to get today's entries
 function getTodayEntries() {
     return state.entries.filter((entry) => isToday(entry.dateISO));
+}
+
+// Render Main Header
+function renderHeader() {
+    const date = document.querySelector(".main__date");
+    date.textContent = formattedDate;
 }
 
 // Make this only render today's entries
@@ -445,6 +454,7 @@ modal.modalForm.addEventListener("submit", (e) => {
 
 // A function to update the entire UI without me needing to call every render function
 function updateUI() {
+    renderHeader();
     renderMacros();
     renderMeal();
     renderProgressSection();
