@@ -282,10 +282,19 @@ function updateConsumed(state) {
         state[macros] = getConsumed(macros);
     }
 }
+// TODO: Helper function to know if the entry is entered today
 
+// TODO: Function to get today's entries
+function getTodayEntries() {
+    return state.entries.filter((entry) => isToday(entry.dateISO));
+}
+
+console.log(getTodayEntries);
+
+// TODO: make this only render today's entries
 function renderMeal() {
     logs.innerHTML = "";
-    state.entries.forEach((entry) => {
+    getTodayEntries().forEach((entry) => {
         // Create the Meal Item
         const mealItem = document.createElement("li");
         mealItem.classList.add("meal__item");
