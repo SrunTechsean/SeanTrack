@@ -198,6 +198,7 @@ function addMeal(mealType, mealName, calories, protein, fat, carbs) {
         protein: protein,
         fat: fat,
         carbs: carbs,
+        dateISO: new Date().toISOString(),
     };
     state.entries.push(newEntry);
     updateConsumed(state);
