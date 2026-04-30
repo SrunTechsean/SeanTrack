@@ -102,13 +102,11 @@
 /* main header section */
 .main__header {
     display: flex;
-    flex-direction: column;
     grid-area: header;
-    justify-content: center;
     padding-top: 1rem;
 }
 
-.main__greeting {
+.main__text {
     color: var(--text-primary);
 }
 
@@ -116,7 +114,24 @@
     color: var(--text-secondary);
 }
 
-/* Card Design  */
+.date-picker {
+    margin-left: auto;
+}
+
+.hidden {
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.date-picker__input {
+    background: none;
+    border: none;
+}
+
 .card {
     display: grid;
     grid-template-rows: 3.1rem 1fr;
