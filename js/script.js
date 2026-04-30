@@ -270,9 +270,10 @@ function removeEntries(id) {
     updateConsumed(state);
 }
 
-// Parameter macros store the string of Calories, Protein, Fat, Carbs
+// Parameter macros array store the string of Calories, Protein, Fat, Carbs
 function getConsumed(macros) {
-    return state.entries.reduce((total, entry) => total + entry[macros], 0);
+    // Only get the consumption of today
+    return getTodayEntries().reduce((total, entry) => total + entry[macros], 0);
 }
 
 // This function Update any macros listed in the global state object
@@ -282,7 +283,7 @@ function updateConsumed(state) {
         state[macros] = getConsumed(macros);
     }
 }
-// TODO: Helper function to know if the entry is entered today
+// Helper function to know if the entry is entered today
 function isToday(dateISO) {
     const entryDate = new Date(dateISO);
     const today = new Date();
@@ -291,14 +292,14 @@ function isToday(dateISO) {
     return entryDate.getFullYear() === today.getFullYear() && entryDate.getMonth() === today.getMonth() && entryDate.getDate() === today.getDate();
 }
 
-// TODO: Function to get today's entries
+// Function to get today's entries
 function getTodayEntries() {
     return state.entries.filter((entry) => isToday(entry.dateISO));
 }
 
 console.log(getTodayEntries);
 
-// TODO: make this only render today's entries
+// Make this only render today's entries
 function renderMeal() {
     logs.innerHTML = "";
     getTodayEntries().forEach((entry) => {
