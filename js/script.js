@@ -325,7 +325,8 @@ function renderHeader() {
 function renderMeal() {
     logs.innerHTML = "";
     getTodayEntries().forEach((entry) => {
-        // Create the Meal Item
+        // Create the Meal Item for each entry and add the innerHTML
+        // I can't add mealItem(li) as innerHTML or it will just render 1 mealItem each loop
         const mealItem = document.createElement("li");
         mealItem.classList.add("meal__item");
         mealItem.dataset.id = entry.id;
