@@ -421,8 +421,12 @@ modal.modalDialog.addEventListener("click", (e) => {
 
 // Open Modal
 addButton.addEventListener("click", (e) => {
+    e.preventDefault();
     const openButton = e.target.closest(".meal-btn");
     if (!openButton) return;
+
+    // Prevent any previous input to still be there
+    modal.modalForm.reset();
 
     // Get meal label which is the mealType so that it automatically put that into the value of the mealType select value
     const label = openButton.querySelector(".meal-btn__label").textContent;
