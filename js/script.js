@@ -415,6 +415,8 @@ const addButton = document.querySelector(".quick-add__body");
 
 modal.modalDialog.addEventListener("click", (e) => {
     if (e.target.closest(".close")) {
+        // Ensure that the new submission won't edit old log
+        state.editingID = null;
         modal.modalDialog.close();
     }
 });
