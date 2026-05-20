@@ -114,7 +114,7 @@
             </header>
 
             <!-- Main Dashboard -->
-            <main class="main">
+            <main class="dashboard hidden">
                 <!-- Main Header Section -->
                 <section class="main__header">
                     <div class="main__greeting">
@@ -122,7 +122,9 @@
                         <p class="main__date">Tuesday, April 14</p>
                     </div>
                     <div class="date-picker">
-                        <label class="date-picker__label hidden" for="date">Date</label>
+                        <label class="date-picker__label hidden" for="date">
+                            Date
+                        </label>
                         <input
                             class="date-picker__input"
                             type="date"
@@ -141,8 +143,8 @@
                     <div class="progress-card__body">
                         <div class="progress-ring">
                             <span class="progress-ring__warning">
-                                This should be a progress wheel showing your calorie
-                                progress!
+                                This should be a progress wheel showing your
+                                calorie progress!
                             </span>
                             <p class="progress-ring__value"></p>
                             <p class="progress-ring__label">consumed</p>
@@ -168,11 +170,17 @@
                                     <header class="macros__header">
                                         <p class="macros__name">Protein</p>
                                         <p class="macros__value">
-                                            <span class="macros__current--protein">
+                                            <span
+                                                class="macros__current--protein"
+                                            >
                                                 85
                                             </span>
-                                            <span class="macros__divider">/</span>
-                                            <span class="macros__target--protein">
+                                            <span class="macros__divider">
+                                                /
+                                            </span>
+                                            <span
+                                                class="macros__target--protein"
+                                            >
                                                 130g
                                             </span>
                                         </p>
@@ -189,8 +197,14 @@
                                     <header class="macros__header">
                                         <p class="macros__name">Carbs</p>
                                         <p class="macros__value">
-                                            <span class="macros__current--carbs">85</span>
-                                            <span class="macros__divider">/</span>
+                                            <span
+                                                class="macros__current--carbs"
+                                            >
+                                                85
+                                            </span>
+                                            <span class="macros__divider">
+                                                /
+                                            </span>
                                             <span class="macros__target--carbs">
                                                 130g
                                             </span>
@@ -208,9 +222,15 @@
                                     <header class="macros__header">
                                         <p class="macros__name">Fats</p>
                                         <p class="macros__value">
-                                            <span class="macros__current--fat">85</span>
-                                            <span class="macros__divider">/</span>
-                                            <span class="macros__target--fat">130g</span>
+                                            <span class="macros__current--fat">
+                                                85
+                                            </span>
+                                            <span class="macros__divider">
+                                                /
+                                            </span>
+                                            <span class="macros__target--fat">
+                                                130g
+                                            </span>
                                         </p>
                                     </header>
                                     <progress
@@ -230,7 +250,10 @@
                         <h3 class="card__tittle">Quick Add</h3>
                     </header>
                     <div class="quick-add__body">
-                        <button type="button" class="meal-btn meal-btn--breakfast">
+                        <button
+                            type="button"
+                            class="meal-btn meal-btn--breakfast"
+                        >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="26"
@@ -364,7 +387,9 @@
                                     </svg>
                                 </div>
                                 <div class="modal-form__header">
-                                    <h3 class="modal-form__tittle">Quick Add Meal</h3>
+                                    <h3 class="modal-form__tittle">
+                                        Quick Add Meal
+                                    </h3>
                                     <p class="modal-form__info">
                                         Log a meal and update your daily total
                                     </p>
@@ -389,8 +414,13 @@
                                 </div>
                             </div>
                             <div class="modal-form__field--meal-type">
-                                <label class="modal-form__label" for="meal-type">
-                                    Meal Type<span class="highlight--red">*</span>
+                                <label
+                                    class="modal-form__label"
+                                    for="meal-type"
+                                >
+                                    Meal Type<span class="highlight--red">
+                                        *
+                                    </span>
                                 </label>
                                 <select
                                     required
@@ -407,8 +437,13 @@
                                 <span class="modal-form__required"></span>
                             </div>
                             <div class="modal-form__field--meal-name">
-                                <label class="modal-form__label" for="meal-name">
-                                    Meal Name<span class="highlight--red">*</span>
+                                <label
+                                    class="modal-form__label"
+                                    for="meal-name"
+                                >
+                                    Meal Name<span class="highlight--red">
+                                        *
+                                    </span>
                                 </label>
                                 <input
                                     required
@@ -420,9 +455,16 @@
                                 >
                                 <span class="modal-form__required"></span>
                             </div>
-                            <div class="modal-form__field--calorie macros-field">
-                                <label class="macros-field__label" for="calories">
-                                    Calories<span class="highlight--red">*</span>
+                            <div
+                                class="modal-form__field--calorie macros-field"
+                            >
+                                <label
+                                    class="macros-field__label"
+                                    for="calories"
+                                >
+                                    Calories<span class="highlight--red">
+                                        *
+                                    </span>
                                 </label>
                                 <input
                                     required
@@ -435,8 +477,13 @@
                                 <span class="suffix">kcal</span>
                                 <span class="modal-form__required"></span>
                             </div>
-                            <div class="modal-form__field--protein macros-field">
-                                <label class="macros-field__label" for="protein">
+                            <div
+                                class="modal-form__field--protein macros-field"
+                            >
+                                <label
+                                    class="macros-field__label"
+                                    for="protein"
+                                >
                                     Protein<span class="highlight--red">*</span>
                                 </label>
                                 <input
@@ -496,7 +543,9 @@
                             </div>
                             <div class="modal-form__submit">
                                 <p class="modal-form__clarify">
-                                    ⓘ Fields marked <span class="highlight--red">
+                                    ⓘ Fields marked <span
+                                        class="highlight--red"
+                                    >
                                         *
                                     </span> are required
                                 </p>
@@ -524,7 +573,9 @@
                 <section class="log">
                     <div class="log__header">
                         <h3 class="log__tittle">Today's Meal</h3>
-                        <a class="log__link link" href="#"><h3>View All Logs-></h3></a>
+                        <a class="log__link link" href="#">
+                            <h3>View All Logs-></h3>
+                        </a>
                     </div>
                     <div class="log-card card">
                         <ul class="meal">
@@ -533,6 +584,9 @@
                     </div>
                 </section>
             </main>
+
+            <!-- Main Weekly Insight -->
+            <main class="insight"></main>
         </div>
     </body>
 </html>

@@ -84,7 +84,7 @@
     border-radius: 50%;
 }
 
-.main {
+.dashboard {
     display: grid;
     grid-template-areas:
         "header header"
@@ -183,7 +183,10 @@
     place-items: center;
     width: var(--size);
     aspect-ratio: 1 / 1;
-    background: conic-gradient(var(--primary) var(--cal-progress, 0%), var(--primary-light) 0%);
+    background: conic-gradient(
+        var(--primary) var(--cal-progress, 0%),
+        var(--primary-light) 0%
+    );
     border-radius: 50%;
 }
 
@@ -577,4 +580,8 @@ textarea {
 
 .highlight--red {
     color: var(--red);
+}
+
+.hidden {
+    display: none;
 }
