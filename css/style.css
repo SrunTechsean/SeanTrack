@@ -118,7 +118,7 @@
     margin-left: auto;
 }
 
-.hidden {
+.hide-label {
     position: absolute;
     top: auto;
     left: -10000px;
