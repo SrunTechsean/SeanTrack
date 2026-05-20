@@ -301,7 +301,11 @@ function isToday(dateISO) {
     const today = state.date;
 
     // If year, month, and day is the same return true
-    return entryDate.getFullYear() === today.getFullYear() && entryDate.getMonth() === today.getMonth() && entryDate.getDate() === today.getDate();
+    return (
+        entryDate.getFullYear() === today.getFullYear() &&
+        entryDate.getMonth() === today.getMonth() &&
+        entryDate.getDate() === today.getDate()
+    );
 }
 
 // Function to get today's entries
@@ -375,7 +379,10 @@ function renderProgressSection() {
     progressWheel.setAttribute("aria-live", "polite");
     progressWheelValue.textContent = progressWheel.ariaValueNow;
 
-    root.style.setProperty("--cal-progress", `${percentageCalculator(state.goal, state.calories)}%`);
+    root.style.setProperty(
+        "--cal-progress",
+        `${percentageCalculator(state.goal, state.calories)}%`,
+    );
 }
 
 function renderMacros() {
@@ -395,7 +402,10 @@ function renderMacros() {
     const carbsCurrent = document.querySelector(".macros__current--carbs");
 
     // Input the percentage of it compare to 100%
-    proteinProgress.value = percentageCalculator(state.proteinGoal, state.protein);
+    proteinProgress.value = percentageCalculator(
+        state.proteinGoal,
+        state.protein,
+    );
     fatProgress.value = percentageCalculator(state.fatGoal, state.fat);
     carbsProgress.value = percentageCalculator(state.carbsGoal, state.carbs);
 
