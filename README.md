@@ -8,6 +8,7 @@ A web-based calorie tracking application built as the final project for [CS50](h
 
 ## Table of Contents
 * [Features](#features)
+* [Installation](#installation)
 * [Usage](#usage)
 * [To-Do](#to-do)
 * [Preview](#preview)
@@ -24,6 +25,14 @@ A web-based calorie tracking application built as the final project for [CS50](h
 * **Data Persistence**: Entries are stored in memory with unique IDs.
 * **Clean UI**: Minimalist design focused on usability and readability.
 * **Responsive Layout**: Works seamlessly across desktop and mobile devices.
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SrunTechsean/Library.git
+   ```
+2. Open `index.html` in any modern web browser.
+
 
 ## Usage
 1. Open `index.html` in any modern web browser.
