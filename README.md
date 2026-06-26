@@ -29,7 +29,7 @@ A web-based calorie tracking application built as the final project for [CS50](h
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SrunTechsean/Library.git
+   git clone https://github.com/SrunTechsean/SeanTrack.git
    ```
 2. Open `index.html` in any modern web browser.
 
