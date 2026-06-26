@@ -44,14 +44,12 @@ A web-based calorie tracking application built as the final project for [CS50](h
 7. Use the **date picker** to view logs for a specific day.
 
 ## To-Do
-* Implement local storage so entries persist after page refresh.
-* Add daily calorie goals and progress tracking.
-* Include a visual chart or graph for calorie trends over time.
-* Add meal categories (breakfast, lunch, dinner, snacks).
-* Improve accessibility with better ARIA labels.
+* **Backend Integration**: Build a full backend with a database to persist meal entries across sessions and devices.
+* **User Authentication**: Add sign-up/login functionality for personalized tracking.
+* **Data Visualization**: Include interactive charts and graphs to visualize calorie trends, weekly summaries, and nutritional insights.
 
 ## Preview
-[Live Demo](https://sruntechsean.github.io/SeanTrack/) *(Update this link once you deploy your project)*
+[Live Demo](https://sruntechsean.github.io/SeanTrack/)
 
 ## Acknowledgments
 * This project was completed as the final project for [Harvard's CS50](https://cs50.harvard.edu/) course.
