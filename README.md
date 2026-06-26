@@ -24,7 +24,6 @@ A web-based calorie tracking application built as the final project for [CS50](h
 * **Calorie Summary**: Automatically tracks your total daily calorie intake.
 * **Data Persistence**: Entries are stored in memory with unique IDs.
 * **Clean UI**: Minimalist design focused on usability and readability.
-* **Responsive Layout**: Works seamlessly across desktop and mobile devices.
 
 ## Installation
 1. Clone the repository:
@@ -47,6 +46,7 @@ A web-based calorie tracking application built as the final project for [CS50](h
 * **Backend Integration**: Build a full backend with a database to persist meal entries across sessions and devices.
 * **User Authentication**: Add sign-up/login functionality for personalized tracking.
 * **Data Visualization**: Include interactive charts and graphs to visualize calorie trends, weekly summaries, and nutritional insights.
+* **Responsive Layout**: Make sure the web application are responsive for any device
 
 ## Preview
 [Live Demo](https://sruntechsean.github.io/SeanTrack/)
