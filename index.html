@@ -1,592 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SeanTrack</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/var.css">
-        <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeanTrack</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/style.css">
 
-        <script src="js/script.js" defer></script>
-    </head>
-    <body>
-        <div class="app">
-            <!-- HEADER -->
-            <header class="header">
-                <!-- Header Logo Brand -->
-                <h2 class="header__logo">SeanTrack</h2>
-                <!-- Header Nav Bar -->
-                <div class="header__nav">
-                    <ul class="header__menu">
-                        <li class="header__item">
-                            <a href="#" class="header__link">
-                                <span class="icon header__icon">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="icon header__icon"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"
-                                        />
-                                        <path
-                                            d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                                        />
-                                    </svg>
-                                </span>
-                                <span class="header__label">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#" class="header__link">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="icon header__icon"
-                                    aria-hidden="true"
-                                >
-                                    <rect
-                                        width="8"
-                                        height="4"
-                                        x="8"
-                                        y="2"
-                                        rx="1"
-                                        ry="1"
-                                    />
-                                    <path
-                                        d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
-                                    />
-                                    <path d="M12 11h4" />
-                                    <path d="M12 16h4" />
-                                    <path d="M8 11h.01" />
-                                    <path d="M8 16h.01" />
-                                </svg>
-                                <span class="header__label">Log</span>
-                            </a>
-                        </li>
-                        <li class="header__item">
-                            <a href="#" class="header__link">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="icon header__icon"
-                                    aria-hidden="true"
-                                >
-                                    <path d="M3 3v16a2 2 0 0 0 2 2h16" />
-                                    <path d="M18 17V9" />
-                                    <path d="M13 17V5" />
-                                    <path d="M8 17v-3" />
-                                </svg>
-                                <span class="header__label">Weekly</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Header Profile -->
-                <img
-                    src="https://ui-avatars.com/api/?name=Tech+Sean&background=1a92d4&color=fff"
-                    alt="Profile"
-                    class="profile header__profile"
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- HEADER -->
+      <header class="header">
+        <!-- Header Logo Brand -->
+        <h2 class="header__logo">SeanTrack</h2>
+        <!-- Header Nav Bar -->
+        <div class="header__nav">
+          <ul class="header__menu">
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <span class="icon header__icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon header__icon"
+                    aria-hidden="true"
+                  >
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                    <path
+                      d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span class="header__label">Dashboard</span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon header__icon"
+                  aria-hidden="true"
                 >
-            </header>
-
-            <!-- Main Dashboard -->
-            <main class="dashboard hidden">
-                <!-- Main Header Section -->
-                <section class="main__header">
-                    <div class="main__greeting">
-                        <h3 class="main__text">Good Morning, Techsean</h3>
-                        <p class="main__date">Tuesday, April 14</p>
-                    </div>
-                    <div class="date-picker">
-                        <label class="date-picker__label hide-label" for="date">
-                            Date
-                        </label>
-                        <input
-                            class="date-picker__input"
-                            type="date"
-                            id="date"
-                            name="date"
-                        >
-                    </div>
-                </section>
-
-                <!-- Main Calorie Progress Section -->
-                <section class="card progress-card">
-                    <div class="card__header">
-                        <h3 class="card__tittle">Today's Progress</h3>
-                        <p class="badge">Goal: 3000 kcal</p>
-                    </div>
-                    <div class="progress-card__body">
-                        <div class="progress-ring">
-                            <span class="progress-ring__warning">
-                                This should be a progress wheel showing your
-                                calorie progress!
-                            </span>
-                            <p class="progress-ring__value"></p>
-                            <p class="progress-ring__label">consumed</p>
-                        </div>
-                        <div class="progress-card__stat">
-                            <div class="stat">
-                                <p class="stat__value">520 kcal</p>
-                                <p class="stat__label">Remaining</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Main Macros Section -->
-                <section class="card macros-card">
-                    <div class="card__header">
-                        <h3 class="card__tittle">Macros</h3>
-                    </div>
-                    <div class="macros-card__body">
-                        <ul class="macros__list">
-                            <li class="macros__item">
-                                <div class="macros">
-                                    <header class="macros__header">
-                                        <p class="macros__name">Protein</p>
-                                        <p class="macros__value">
-                                            <span
-                                                class="macros__current--protein"
-                                            >
-                                                85
-                                            </span>
-                                            <span class="macros__divider">
-                                                /
-                                            </span>
-                                            <span
-                                                class="macros__target--protein"
-                                            >
-                                                130g
-                                            </span>
-                                        </p>
-                                    </header>
-                                    <progress
-                                        class="macros__bar macros__bar--protein"
-                                        max="100"
-                                        value="56"
-                                    ></progress>
-                                </div>
-                            </li>
-                            <li class="macros__item">
-                                <div class="macros">
-                                    <header class="macros__header">
-                                        <p class="macros__name">Carbs</p>
-                                        <p class="macros__value">
-                                            <span
-                                                class="macros__current--carbs"
-                                            >
-                                                85
-                                            </span>
-                                            <span class="macros__divider">
-                                                /
-                                            </span>
-                                            <span class="macros__target--carbs">
-                                                130g
-                                            </span>
-                                        </p>
-                                    </header>
-                                    <progress
-                                        class="macros__bar macros__bar--carbs"
-                                        max="100"
-                                        value="39"
-                                    ></progress>
-                                </div>
-                            </li>
-                            <li class="macros__item">
-                                <div class="macros">
-                                    <header class="macros__header">
-                                        <p class="macros__name">Fats</p>
-                                        <p class="macros__value">
-                                            <span class="macros__current--fat">
-                                                85
-                                            </span>
-                                            <span class="macros__divider">
-                                                /
-                                            </span>
-                                            <span class="macros__target--fat">
-                                                130g
-                                            </span>
-                                        </p>
-                                    </header>
-                                    <progress
-                                        class="macros__bar macros__bar--fat"
-                                        max="100"
-                                        value="70"
-                                    ></progress>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Main Add Section -->
-                <section class="card quick-add">
-                    <header class="card__header">
-                        <h3 class="card__tittle">Quick Add</h3>
-                    </header>
-                    <div class="quick-add__body">
-                        <button
-                            type="button"
-                            class="meal-btn meal-btn--breakfast"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="26"
-                                height="26"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="icon icon--breakfast"
-                                aria-hidden="true"
-                            >
-                                <circle cx="12" cy="12" r="4" />
-                                <path d="M12 2v2" />
-                                <path d="M12 20v2" />
-                                <path d="m4.93 4.93 1.41 1.41" />
-                                <path d="m17.66 17.66 1.41 1.41" />
-                                <path d="M2 12h2" />
-                                <path d="M20 12h2" />
-                                <path d="m6.34 17.66-1.41 1.41" />
-                                <path d="m19.07 4.93-1.41 1.41" />
-                            </svg>
-                            <h4 class="meal-btn__label">Breakfast</h4>
-                        </button>
-                        <button type="button" class="meal-btn meal-btn--lunch">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="26"
-                                height="26"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="icon icon--lunch"
-                                aria-hidden="true"
-                            >
-                                <circle cx="12" cy="12" r="4" />
-                                <path d="M12 2v2" />
-                                <path d="M12 20v2" />
-                                <path d="m4.93 4.93 1.41 1.41" />
-                                <path d="m17.66 17.66 1.41 1.41" />
-                                <path d="M2 12h2" />
-                                <path d="M20 12h2" />
-                                <path d="m6.34 17.66-1.41 1.41" />
-                                <path d="m19.07 4.93-1.41 1.41" />
-                            </svg>
-                            <h4 class="meal-btn__label">Lunch</h4>
-                        </button>
-                        <button type="button" class="meal-btn meal-btn--dinner">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="26"
-                                height="26"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="icon icon--dinner"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
-                                />
-                            </svg>
-                            <h4 class="meal-btn__label">Dinner</h4>
-                        </button>
-                        <button type="button" class="meal-btn meal-btn--snack">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="26"
-                                height="26"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="icon icon--snack"
-                                aria-hidden="true"
-                            >
-                                <path d="M12 6.528V3a1 1 0 0 1 1-1h0" />
-                                <path
-                                    d="M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21"
-                                />
-                            </svg>
-                            <h4 class="meal-btn__label">Snack</h4>
-                        </button>
-                        <button type="button" class="meal-btn meal-btn--custom">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="26"
-                                height="26"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="icon icon--custom"
-                                aria-hidden="true"
-                            >
-                                <circle cx="12" cy="12" r="10" />
-                                <path d="M8 12h8" />
-                                <path d="M12 8v8" />
-                            </svg>
-                            <h4 class="meal-btn__label">Custom</h4>
-                        </button>
-                    </div>
-                    <dialog class="modal">
-                        <form action="#" class="modal-form" method="dialog">
-                            <div class="modal-form__caption">
-                                <div class="modal-form__icon-container">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="40"
-                                        height="40"
-                                        viewBox="0 0 628 610"
-                                        aria-hidden="true"
-                                        class="icon icon--dining"
-                                    >
-                                        <path
-                                            fill="currentColor"
-                                            fill-rule="evenodd"
-                                            d="M255 96L218 108L188 125L188 158L185 170L178 182L171 189L158 196L156 200L155 247L158 404L176 421L194 434L218 447L239 455L275 462L309 462L331 459L370 446L405 425L436 395L458 361L459 294L445 283L439 270L439 224L444 171L429 152L410 134L389 119L358 104L335 97L309 93L276 93Z M293 150L316 152L340 159L358 168L380 185L396 203L408 223L415 242L420 270L419 296L411 325L402 343L387 363L364 383L342 395L321 402L294 405L270 403L251 398L231 389L209 373L192 355L182 340L171 314L166 288L166 265L170 244L182 215L197 194L216 176L239 162L265 153Z M286 164L258 169L236 179L220 190L205 205L194 221L183 248L180 263L180 291L183 307L193 332L205 350L220 365L234 375L261 387L285 391L303 391L328 386L352 375L367 364L379 352L394 330L403 307L406 291L406 266L403 249L390 218L379 203L368 192L350 179L331 170L310 165Z M504 62L488 82L476 105L466 133L458 169L453 215L452 266L455 274L461 280L470 283L504 283Z M82 62L77 69L77 157L79 165L86 176L101 185L107 192L109 199L109 212L111 214L138 215L143 210L143 196L145 191L152 184L159 181L167 174L174 159L174 67L171 63L165 61L160 63L157 68L157 147L155 149L136 149L134 147L134 68L131 63L125 61L120 63L117 68L117 148L96 149L94 147L94 67L89 62Z M110 264L106 480L113 490L119 493L128 494L140 489L146 477L142 265Z M472 334L468 476L471 485L477 491L491 494L500 491L506 485L509 477L505 334Z M377 271L381 276L378 301L371 319L358 337L342 351L327 359L306 365L290 365L286 358L291 352L307 351L323 346L337 338L349 327L362 306L367 288L368 274L372 271Z M473 297L472 320L505 320L504 297Z M110 228L110 251L142 251L142 228Z M361 231L366 231L374 242L376 251L372 256L367 256L363 253L357 240L357 235Z"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="modal-form__header">
-                                    <h3 class="modal-form__tittle">
-                                        Quick Add Meal
-                                    </h3>
-                                    <p class="modal-form__info">
-                                        Log a meal and update your daily total
-                                    </p>
-                                </div>
-                                <div class="modal-form__close close">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="icon modal-form__close"
-                                    >
-                                        <title>Close Icon</title>
-                                        <path d="M18 6 6 18" />
-                                        <path d="m6 6 12 12" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="modal-form__field--meal-type">
-                                <label
-                                    class="modal-form__label"
-                                    for="meal-type"
-                                >
-                                    Meal Type<span class="highlight--red">
-                                        *
-                                    </span>
-                                </label>
-                                <select
-                                    required
-                                    id="meal-type"
-                                    name="mealType"
-                                    class="modal-form__input required"
-                                >
-                                    <option value="Breakfast">Breakfast</option>
-                                    <option value="Lunch">Lunch</option>
-                                    <option value="Dinner">Dinner</option>
-                                    <option value="Snack">Snack</option>
-                                    <option value="Custom">Custom</option>
-                                </select>
-                                <span class="modal-form__required"></span>
-                            </div>
-                            <div class="modal-form__field--meal-name">
-                                <label
-                                    class="modal-form__label"
-                                    for="meal-name"
-                                >
-                                    Meal Name<span class="highlight--red">
-                                        *
-                                    </span>
-                                </label>
-                                <input
-                                    required
-                                    class="modal-form__input required"
-                                    type="text"
-                                    id="meal-name"
-                                    name="mealName"
-                                    placeholder="e.g. Chicken and Rice"
-                                >
-                                <span class="modal-form__required"></span>
-                            </div>
-                            <div
-                                class="modal-form__field--calorie macros-field"
-                            >
-                                <label
-                                    class="macros-field__label"
-                                    for="calories"
-                                >
-                                    Calories<span class="highlight--red">
-                                        *
-                                    </span>
-                                </label>
-                                <input
-                                    required
-                                    class="macros-field__input required"
-                                    type="number"
-                                    id="calories"
-                                    name="calories"
-                                    placeholder="e.g. 420"
-                                >
-                                <span class="suffix">kcal</span>
-                                <span class="modal-form__required"></span>
-                            </div>
-                            <div
-                                class="modal-form__field--protein macros-field"
-                            >
-                                <label
-                                    class="macros-field__label"
-                                    for="protein"
-                                >
-                                    Protein<span class="highlight--red">*</span>
-                                </label>
-                                <input
-                                    required
-                                    class="macros-field__input required"
-                                    type="number"
-                                    id="protein"
-                                    name="protein"
-                                    placeholder="e.g. 24"
-                                >
-                                <span class="suffix">g</span>
-                                <span class="modal-form__required"></span>
-                            </div>
-                            <div class="modal-form__field--fat macros-field">
-                                <label class="macros-field__label" for="fat">
-                                    Fat<span class="highlight--red">*</span>
-                                </label>
-                                <input
-                                    required
-                                    class="macros-field__input required"
-                                    type="number"
-                                    id="fat"
-                                    name="fat"
-                                    placeholder="e.g. 10"
-                                >
-                                <span class="suffix">g</span>
-                                <span class="modal-form__required"></span>
-                            </div>
-                            <div class="modal-form__field--carbs macros-field">
-                                <label class="macros-field__label" for="carbs">
-                                    Carbs<span class="highlight--red">*</span>
-                                </label>
-                                <input
-                                    required
-                                    class="macros-field__input required"
-                                    type="number"
-                                    id="carbs"
-                                    name="carbs"
-                                    placeholder="e.g. 40"
-                                >
-                                <span class="suffix">g</span>
-                                <span class="modal-form__required"></span>
-                            </div>
-
-                            <div class="modal-form__field--note">
-                                <label class="modal-form__label" for="note">
-                                    Notes (Optional)
-                                </label>
-                                <textarea
-                                    class="modal-form__input modal-form__textarea required"
-                                    type="text"
-                                    id="note"
-                                    name="note"
-                                    placeholder="Add any note about this meal..."
-                                ></textarea>
-                                <span class="modal-form__required"></span>
-                            </div>
-                            <div class="modal-form__submit">
-                                <p class="modal-form__clarify">
-                                    ⓘ Fields marked <span
-                                        class="highlight--red"
-                                    >
-                                        *
-                                    </span> are required
-                                </p>
-                                <div class="modal-form__btn-container">
-                                    <button
-                                        class="btn btn--secondary close"
-                                        type="button"
-                                    >
-                                        Cancel
-                                    </button>
-                                    <button
-                                        id="open"
-                                        class="btn btn--primary"
-                                        type="submit"
-                                    >
-                                        ✓⃝ Save Meal
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </dialog>
-                </section>
-
-                <!-- Main Log Section -->
-                <section class="log">
-                    <div class="log__header">
-                        <h3 class="log__tittle">Today's Meal</h3>
-                        <a class="log__link link" href="#">
-                            <h3>View All Logs-></h3>
-                        </a>
-                    </div>
-                    <div class="log-card card">
-                        <ul class="meal">
-                            <!-- List of meal log item will be generated using JS -->
-                        </ul>
-                    </div>
-                </section>
-            </main>
-
-            <!-- Main Weekly Insight -->
-            <main class="insight"></main>
+                  <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                  <path
+                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                  />
+                  <path d="M12 11h4" />
+                  <path d="M12 16h4" />
+                  <path d="M8 11h.01" />
+                  <path d="M8 16h.01" />
+                </svg>
+                <span class="header__label">Log</span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon header__icon"
+                  aria-hidden="true"
+                >
+                  <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                  <path d="M18 17V9" />
+                  <path d="M13 17V5" />
+                  <path d="M8 17v-3" />
+                </svg>
+                <span class="header__label">Weekly</span>
+              </a>
+            </li>
+          </ul>
         </div>
-    </body>
+        <!-- Header Profile -->
+        <img
+          src="https://ui-avatars.com/api/?name=Tech+Sean&background=1a92d4&color=fff"
+          alt="Profile"
+          class="profile header__profile"
+        >
+      </header>
+
+      <!-- Main Dashboard -->
+      <main class="dashboard">
+        <!-- Main Header Section -->
+        <section class="main__header">
+          <div class="main__greeting">
+            <h3 class="main__text">Good Morning, Techsean</h3>
+            <p class="main__date">Tuesday, April 14</p>
+          </div>
+          <div class="date-picker">
+            <label class="date-picker__label hide-label" for="date">Date</label>
+            <input class="date-picker__input" type="date" id="date" name="date">
+          </div>
+        </section>
+
+        <!-- Main Calorie Progress Section -->
+        <section class="card progress-card">
+          <div class="card__header">
+            <h3 class="card__tittle">Today's Progress</h3>
+            <p class="badge">Goal: 3000 kcal</p>
+          </div>
+          <div class="progress-card__body">
+            <div class="progress-ring">
+              <span class="progress-ring__warning">
+                This should be a progress wheel showing your calorie progress!
+              </span>
+              <p class="progress-ring__value"></p>
+              <p class="progress-ring__label">consumed</p>
+            </div>
+            <div class="progress-card__stat">
+              <div class="stat">
+                <p class="stat__value">520 kcal</p>
+                <p class="stat__label">Remaining</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Macros Section -->
+        <section class="card macros-card">
+          <div class="card__header">
+            <h3 class="card__tittle">Macros</h3>
+          </div>
+          <div class="macros-card__body">
+            <ul class="macros__list">
+              <li class="macros__item">
+                <div class="macros">
+                  <header class="macros__header">
+                    <p class="macros__name">Protein</p>
+                    <p class="macros__value">
+                      <span class="macros__current--protein">85</span>
+                      <span class="macros__divider">/</span>
+                      <span class="macros__target--protein">130g</span>
+                    </p>
+                  </header>
+                  <progress
+                    class="macros__bar macros__bar--protein"
+                    max="100"
+                    value="56"
+                  ></progress>
+                </div>
+              </li>
+              <li class="macros__item">
+                <div class="macros">
+                  <header class="macros__header">
+                    <p class="macros__name">Carbs</p>
+                    <p class="macros__value">
+                      <span class="macros__current--carbs">85</span>
+                      <span class="macros__divider">/</span>
+                      <span class="macros__target--carbs">130g</span>
+                    </p>
+                  </header>
+                  <progress
+                    class="macros__bar macros__bar--carbs"
+                    max="100"
+                    value="39"
+                  ></progress>
+                </div>
+              </li>
+              <li class="macros__item">
+                <div class="macros">
+                  <header class="macros__header">
+                    <p class="macros__name">Fats</p>
+                    <p class="macros__value">
+                      <span class="macros__current--fat">85</span>
+                      <span class="macros__divider">/</span>
+                      <span class="macros__target--fat">130g</span>
+                    </p>
+                  </header>
+                  <progress
+                    class="macros__bar macros__bar--fat"
+                    max="100"
+                    value="70"
+                  ></progress>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Main Add Section -->
+        <section class="card quick-add">
+          <header class="card__header">
+            <h3 class="card__tittle">Quick Add</h3>
+          </header>
+          <div class="quick-add__body">
+            <button type="button" class="meal-btn meal-btn--breakfast">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon--breakfast"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+              <h4 class="meal-btn__label">Breakfast</h4>
+            </button>
+            <button type="button" class="meal-btn meal-btn--lunch">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon--lunch"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+              <h4 class="meal-btn__label">Lunch</h4>
+            </button>
+            <button type="button" class="meal-btn meal-btn--dinner">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon--dinner"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+                />
+              </svg>
+              <h4 class="meal-btn__label">Dinner</h4>
+            </button>
+            <button type="button" class="meal-btn meal-btn--snack">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon--snack"
+                aria-hidden="true"
+              >
+                <path d="M12 6.528V3a1 1 0 0 1 1-1h0" />
+                <path
+                  d="M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21"
+                />
+              </svg>
+              <h4 class="meal-btn__label">Snack</h4>
+            </button>
+            <button type="button" class="meal-btn meal-btn--custom">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon--custom"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12h8" />
+                <path d="M12 8v8" />
+              </svg>
+              <h4 class="meal-btn__label">Custom</h4>
+            </button>
+          </div>
+          <dialog class="modal">
+            <form action="#" class="modal-form" method="dialog">
+              <div class="modal-form__caption">
+                <div class="modal-form__icon-container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 628 610"
+                    aria-hidden="true"
+                    class="icon icon--dining"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M255 96L218 108L188 125L188 158L185 170L178 182L171 189L158 196L156 200L155 247L158 404L176 421L194 434L218 447L239 455L275 462L309 462L331 459L370 446L405 425L436 395L458 361L459 294L445 283L439 270L439 224L444 171L429 152L410 134L389 119L358 104L335 97L309 93L276 93Z M293 150L316 152L340 159L358 168L380 185L396 203L408 223L415 242L420 270L419 296L411 325L402 343L387 363L364 383L342 395L321 402L294 405L270 403L251 398L231 389L209 373L192 355L182 340L171 314L166 288L166 265L170 244L182 215L197 194L216 176L239 162L265 153Z M286 164L258 169L236 179L220 190L205 205L194 221L183 248L180 263L180 291L183 307L193 332L205 350L220 365L234 375L261 387L285 391L303 391L328 386L352 375L367 364L379 352L394 330L403 307L406 291L406 266L403 249L390 218L379 203L368 192L350 179L331 170L310 165Z M504 62L488 82L476 105L466 133L458 169L453 215L452 266L455 274L461 280L470 283L504 283Z M82 62L77 69L77 157L79 165L86 176L101 185L107 192L109 199L109 212L111 214L138 215L143 210L143 196L145 191L152 184L159 181L167 174L174 159L174 67L171 63L165 61L160 63L157 68L157 147L155 149L136 149L134 147L134 68L131 63L125 61L120 63L117 68L117 148L96 149L94 147L94 67L89 62Z M110 264L106 480L113 490L119 493L128 494L140 489L146 477L142 265Z M472 334L468 476L471 485L477 491L491 494L500 491L506 485L509 477L505 334Z M377 271L381 276L378 301L371 319L358 337L342 351L327 359L306 365L290 365L286 358L291 352L307 351L323 346L337 338L349 327L362 306L367 288L368 274L372 271Z M473 297L472 320L505 320L504 297Z M110 228L110 251L142 251L142 228Z M361 231L366 231L374 242L376 251L372 256L367 256L363 253L357 240L357 235Z"
+                    />
+                  </svg>
+                </div>
+                <div class="modal-form__header">
+                  <h3 class="modal-form__tittle">Quick Add Meal</h3>
+                  <p class="modal-form__info">
+                    Log a meal and update your daily total
+                  </p>
+                </div>
+                <div class="modal-form__close close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon modal-form__close"
+                  >
+                    <title>Close Icon</title>
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                </div>
+              </div>
+              <div class="modal-form__field--meal-type">
+                <label class="modal-form__label" for="meal-type">
+                  Meal Type<span class="highlight--red">*</span>
+                </label>
+                <select
+                  required
+                  id="meal-type"
+                  name="mealType"
+                  class="modal-form__input required"
+                >
+                  <option value="Breakfast">Breakfast</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner">Dinner</option>
+                  <option value="Snack">Snack</option>
+                  <option value="Custom">Custom</option>
+                </select>
+                <span class="modal-form__required"></span>
+              </div>
+              <div class="modal-form__field--meal-name">
+                <label class="modal-form__label" for="meal-name">
+                  Meal Name<span class="highlight--red">*</span>
+                </label>
+                <input
+                  required
+                  class="modal-form__input required"
+                  type="text"
+                  id="meal-name"
+                  name="mealName"
+                  placeholder="e.g. Chicken and Rice"
+                >
+                <span class="modal-form__required"></span>
+              </div>
+              <div class="modal-form__field--calorie macros-field">
+                <label class="macros-field__label" for="calories">
+                  Calories<span class="highlight--red">*</span>
+                </label>
+                <input
+                  required
+                  class="macros-field__input required"
+                  type="number"
+                  id="calories"
+                  name="calories"
+                  placeholder="e.g. 420"
+                >
+                <span class="suffix">kcal</span>
+                <span class="modal-form__required"></span>
+              </div>
+              <div class="modal-form__field--protein macros-field">
+                <label class="macros-field__label" for="protein">
+                  Protein<span class="highlight--red">*</span>
+                </label>
+                <input
+                  required
+                  class="macros-field__input required"
+                  type="number"
+                  id="protein"
+                  name="protein"
+                  placeholder="e.g. 24"
+                >
+                <span class="suffix">g</span>
+                <span class="modal-form__required"></span>
+              </div>
+              <div class="modal-form__field--fat macros-field">
+                <label class="macros-field__label" for="fat">
+                  Fat<span class="highlight--red">*</span>
+                </label>
+                <input
+                  required
+                  class="macros-field__input required"
+                  type="number"
+                  id="fat"
+                  name="fat"
+                  placeholder="e.g. 10"
+                >
+                <span class="suffix">g</span>
+                <span class="modal-form__required"></span>
+              </div>
+              <div class="modal-form__field--carbs macros-field">
+                <label class="macros-field__label" for="carbs">
+                  Carbs<span class="highlight--red">*</span>
+                </label>
+                <input
+                  required
+                  class="macros-field__input required"
+                  type="number"
+                  id="carbs"
+                  name="carbs"
+                  placeholder="e.g. 40"
+                >
+                <span class="suffix">g</span>
+                <span class="modal-form__required"></span>
+              </div>
+
+              <div class="modal-form__field--note">
+                <label class="modal-form__label" for="note">
+                  Notes (Optional)
+                </label>
+                <textarea
+                  class="modal-form__input modal-form__textarea required"
+                  type="text"
+                  id="note"
+                  name="note"
+                  placeholder="Add any note about this meal..."
+                ></textarea>
+                <span class="modal-form__required"></span>
+              </div>
+              <div class="modal-form__submit">
+                <p class="modal-form__clarify">
+                  ⓘ Fields marked <span class="highlight--red">*</span> are
+                  required
+                </p>
+                <div class="modal-form__btn-container">
+                  <button class="btn btn--secondary close" type="button">
+                    Cancel
+                  </button>
+                  <button id="open" class="btn btn--primary" type="submit">
+                    ✓⃝ Save Meal
+                  </button>
+                </div>
+              </div>
+            </form>
+          </dialog>
+        </section>
+
+        <!-- Main Log Section -->
+        <section class="log">
+          <div class="log__header">
+            <h3 class="log__tittle">Today's Meal</h3>
+            <a class="log__link link" href="#">
+              <h3>View All Logs-></h3>
+            </a>
+          </div>
+          <div class="log-card card">
+            <ul class="meal">
+              <!-- List of meal log item will be generated using JS -->
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <!-- Main Weekly Insight -->
+      <main class="insight hidden">
+        <section class="main__header">
+          <div class="main__greeting">
+            <h3 class="main__text">Weekly Overview</h3>
+            <p class="main__date">May 19 - May 25</p>
+          </div>
+          <div class="date-picker">
+            <label class="date-picker__label hide-label" for="date">Date</label>
+            <input class="date-picker__input" type="date" id="date" name="date">
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
