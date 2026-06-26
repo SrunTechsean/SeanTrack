@@ -1,0 +1,55 @@
+# SeanTrack
+
+A web-based calorie tracking application built as the final project for [CS50](https://cs50.harvard.edu/). SeanTrack helps you log your daily meals and monitor your calorie intake with a clean, intuitive interface.
+
+<img src="./assets/showcase-homepage.png">
+
+<img src="./assets/showcase-form.png">
+
+## Table of Contents
+* [Features](#features)
+* [Usage](#usage)
+* [To-Do](#to-do)
+* [Preview](#preview)
+* [Acknowledgments](#acknowledgments)
+* [Credits](#credits)
+* [License](#license)
+
+## Features
+* **Add Meal Entries**: Log meals with name, calorie count, and date.
+* **Edit Entries**: Modify existing meal logs with ease.
+* **Delete Entries**: Remove meals from your log when needed.
+* **Date Picker**: Select specific dates to view or log meals for that day.
+* **Calorie Summary**: Automatically tracks your total daily calorie intake.
+* **Data Persistence**: Entries are stored in memory with unique IDs.
+* **Clean UI**: Minimalist design focused on usability and readability.
+* **Responsive Layout**: Works seamlessly across desktop and mobile devices.
+
+## Usage
+1. Open `index.html` in any modern web browser.
+2. Click **"Add Meal"** to open the entry form.
+3. Fill in the meal name, calorie count, and select a date.
+4. Click **"Save"** — your meal will appear in the log.
+5. To edit a meal, click the **edit icon** on its entry.
+6. To delete a meal, click the **trash icon**.
+7. Use the **date picker** to view logs for a specific day.
+
+## To-Do
+* Implement local storage so entries persist after page refresh.
+* Add daily calorie goals and progress tracking.
+* Include a visual chart or graph for calorie trends over time.
+* Add meal categories (breakfast, lunch, dinner, snacks).
+* Improve accessibility with better ARIA labels.
+
+## Preview
+[Live Demo](https://sruntechsean.github.io/SeanTrack/) *(Update this link once you deploy your project)*
+
+## Acknowledgments
+* This project was completed as the final project for [Harvard's CS50](https://cs50.harvard.edu/) course.
+* Built as a practical application of full-stack web development concepts learned throughout the course.
+
+## Credits
+* **Icons**: [Lucide](https://lucide.dev/) for clean, open-source SVG icons.
+
+## License
+[MIT](https://github.com/SrunTechsean/SeanTrack/blob/main/LICENSE) © SrunTechsean
